@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        
+        <loc>https://liamsnowdon.uk/</loc>
+    
+        <image:image>
+            <image:loc>https://liamsnowdon.uk/assets/images/profile.jpg</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>https://liamsnowdon.uk/assets/images/blog-icon-white.png</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>https://liamsnowdon.uk/assets/images/projects/blog.png</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>https://liamsnowdon.uk/assets/images/projects/github.png</image:loc>
+        </image:image>
+    
+        <image:image>
+            <image:loc>https://liamsnowdon.uk/assets/images/projects/github.png</image:loc>
+        </image:image>
+    
+        
+        <lastmod>2021-01-22T01:39:10.986Z</lastmod>
+    
+        
+        <priority>1.0</priority>
+    
+    </url>
+</urlset>
