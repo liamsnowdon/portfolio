@@ -5,27 +5,27 @@
         <loc>https://liamsnowdon.uk/</loc>
     
         <image:image>
-            <image:loc>https://liamsnowdon.uk/assets/images/profile.jpg</image:loc>
+            <image:loc>https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages/assets/images/profile.jpg</image:loc>
         </image:image>
     
         <image:image>
-            <image:loc>https://liamsnowdon.uk/assets/images/blog-icon-white.png</image:loc>
+            <image:loc>https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages/assets/images/blog-icon-white.png</image:loc>
         </image:image>
     
         <image:image>
-            <image:loc>https://liamsnowdon.uk/assets/images/projects/blog.png</image:loc>
+            <image:loc>https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages/assets/images/projects/blog.png</image:loc>
         </image:image>
     
         <image:image>
-            <image:loc>https://liamsnowdon.uk/assets/images/projects/github.png</image:loc>
+            <image:loc>https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages/assets/images/projects/github.png</image:loc>
         </image:image>
     
         <image:image>
-            <image:loc>https://liamsnowdon.uk/assets/images/projects/github.png</image:loc>
+            <image:loc>https://cdn.jsdelivr.net/gh/liamsnowdon/portfolio@gh-pages/assets/images/projects/github.png</image:loc>
         </image:image>
     
         
-        <lastmod>2021-01-22T01:41:27.024Z</lastmod>
+        <lastmod>2021-02-17T20:56:46.868Z</lastmod>
     
         
         <priority>1.0</priority>
