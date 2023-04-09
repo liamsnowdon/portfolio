@@ -10,6 +10,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "dependencies": {
+    "@vueuse/motion": "^2.0.0-beta.25",
+    "swiper": "^9.1.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
     "@iconify-json/carbon": "^1.1.16",
@@ -18,9 +22,5 @@
     "eslint": "^8.38.0",
     "nuxt": "^3.3.3",
     "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "@vueuse/motion": "^2.0.0-beta.25",
-    "swiper": "^9.1.0"
   }
 }

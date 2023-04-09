@@ -51,7 +51,6 @@ const items = [
             },
             1024: {
               slidesPerView: 5,
-              slidesPerView: 5,
             },
             1280: {
               slidesPerView: 6,
