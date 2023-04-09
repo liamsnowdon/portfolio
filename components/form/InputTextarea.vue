@@ -19,6 +19,7 @@ defineEmits(['update:modelValue'])
 
     <textarea
       :id="id"
+      :name="id"
       bg="neutral-800"
       p="3"
       w="full"
