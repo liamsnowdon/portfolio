@@ -33,25 +33,25 @@ const form = ref({
       >
         <input type="hidden" name="form-name" value="contact">
 
-        <InputText id="name" v-model="form.name" placeholder="John Doe" required>
+        <InputText id="name" v-model="form.name" placeholder="Your name" required>
           <template #label>
             Name
           </template>
         </InputText>
 
-        <InputText id="email" v-model="form.email" type="email" placeholder="example@gmail.com" required>
+        <InputText id="email" v-model="form.email" type="email" placeholder="Your email to reply to" required>
           <template #label>
             Email
           </template>
         </InputText>
 
-        <InputText id="subject" v-model="form.subject" placeholder="Let's connect!" required>
+        <InputText id="subject" v-model="form.subject" placeholder="Subject you want to discuss" required>
           <template #label>
             Subject
           </template>
         </InputText>
 
-        <InputTextarea id="message" v-model="form.message" placeholder="It would be great to chat! Would you be interesting in connecting?" required>
+        <InputTextarea id="message" v-model="form.message" placeholder="What do you want to talk about?" required>
           <template #label>
             Message
           </template>
