@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const classes = computed(() => {
   return {
-    'bg-indigo-400 hover:bg-indigo-500 ring-indigo-400 ring-offset-indigo-900  text-white': props.variant === 'primary',
+    'bg-indigo-500 hover:bg-indigo-400 ring-indigo-500 ring-offset-indigo-900  text-white': props.variant === 'primary',
     'bg-white hover:bg-neutral-200 ring-white ring-offset-neutral-900 text-black': props.variant === 'secondary',
     'bg-[#ed40a9] hover:bg-[#eb5cc1] ring-[#ed40a9] ring-offset-white text-white': props.variant === 'printed',
     'bg-blue-600 hover:bg-blue-500 ring-blue-600 text-white': props.variant === 'widgeter',

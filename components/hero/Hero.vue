@@ -20,7 +20,7 @@
           opacity: 1,
         },
       }"
-      bg="black/20" overflow="hidden" m="b-4" border="~ indigo-400 rounded-full"
+      bg="black/20" overflow="hidden" m="b-4" border="~ indigo-500 rounded-full"
     >
       <img src="/images/memoji.png" alt="Liam Snowdon Profile Picture" h="30 md:60" w="30 md:60">
     </div>
@@ -77,7 +77,7 @@
           },
         },
       }"
-      text="lg md:2xl indigo-400" font="semibold" m="b-8"
+      text="lg md:2xl indigo-500" font="semibold" m="b-8"
     >
       6+ years of experience building cool stuff
     </p>

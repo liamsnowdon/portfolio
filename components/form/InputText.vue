@@ -27,7 +27,7 @@ defineEmits(['update:modelValue'])
       bg="neutral-800 focus:neutral-700"
       p="3"
       w="full"
-      border="1 rounded-xl neutral-800 focus:indigo-400"
+      border="1 rounded-xl neutral-800 focus:indigo-500"
       text="sm white"
       outline="none"
       :placeholder="placeholder"
