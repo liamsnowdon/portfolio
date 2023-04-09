@@ -51,7 +51,7 @@ const form = ref({
           </template>
         </InputText>
 
-        <InputTextarea id="message" v-model="form.message" required>
+        <InputTextarea id="message" v-model="form.message" placeholder="It would be great to chat! Would you be interesting in connecting?" required>
           <template #label>
             Message
           </template>
