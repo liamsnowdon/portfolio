@@ -22,7 +22,17 @@ const form = ref({
         </p>
       </div>
 
-      <form max-w="screen-sm" m="x-auto" space="y-4" @submit.prevent>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        max-w="screen-sm"
+        m="x-auto"
+        space="y-4"
+      >
+        <input type="hidden" name="form-name" value="contact">
+
         <InputText id="name" v-model="form.name" placeholder="John Doe" required>
           <template #label>
             Name

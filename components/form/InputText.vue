@@ -22,6 +22,7 @@ defineEmits(['update:modelValue'])
 
     <input
       :id="id"
+      :name="id"
       :type="type"
       bg="neutral-800"
       p="3"
