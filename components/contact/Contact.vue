@@ -39,7 +39,7 @@ const form = ref({
           </template>
         </InputText>
 
-        <InputText id="name" v-model="form.email" type="email" placeholder="example@gmail.com" required>
+        <InputText id="email" v-model="form.email" type="email" placeholder="example@gmail.com" required>
           <template #label>
             Email
           </template>
