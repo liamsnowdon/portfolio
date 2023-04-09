@@ -17,7 +17,7 @@ defineProps<Props>()
     flex="~"
     items="center"
     rounded="full"
-    p="x-3 y-1"
+    p="x-4 y-2"
     space="x-2"
     bg="neutral-800 hover:neutral-700"
   >

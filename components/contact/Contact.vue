@@ -58,7 +58,7 @@ const form = ref({
         </InputTextarea>
 
         <div flex="~" justify="center">
-          <Button>
+          <Button full-size>
             Submit
           </Button>
         </div>

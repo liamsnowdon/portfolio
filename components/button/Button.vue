@@ -27,7 +27,7 @@ const classes = computed(() => {
     'py-3 px-5 text-base': props.size === 'medium',
     'py-4 px-6 text-lg': props.size === 'large',
     'w-full': props.fullSize,
-    'inline-flex justify-center rounded-full font-semibold text-center': true,
+    'inline-flex justify-center rounded-xl font-semibold text-center': true,
   }
 })
 
