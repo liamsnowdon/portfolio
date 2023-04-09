@@ -5,6 +5,12 @@ const form = ref({
   subject: '',
   message: '',
 })
+
+const socials = [
+  { name: 'Email', icon: 'i-carbon-email', url: 'mailto:snowdon.liam@gmail.com' },
+  { name: 'Linkedin', icon: 'i-carbon-logo-linkedin', url: 'https://www.linkedin.com/in/liam-snowdon' },
+  { name: 'Github', icon: 'i-carbon-logo-github', url: 'https://github.com/liamsnowdon' },
+]
 </script>
 
 <template>
@@ -20,6 +26,22 @@ const form = ref({
           <br>
           Or, fill out the form to send me a message directly.
         </p>
+
+        <div flex="~" justify="center" space="x-4">
+          <a
+            v-for="social in socials"
+            :key="social.icon"
+            :href="social.url"
+            target="_blank"
+            flex="inline"
+            p="2"
+            bg="neutral-800 hover:neutral-700"
+            border="rounded-2xl"
+            class="group"
+          >
+            <span :class="social.icon" display="inline-block" text="5xl neutral-400 group-hover:white" />
+          </a>
+        </div>
       </div>
 
       <form

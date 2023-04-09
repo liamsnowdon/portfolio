@@ -24,7 +24,7 @@ defineEmits(['update:modelValue'])
       :id="id"
       :name="id"
       :type="type"
-      bg="neutral-800"
+      bg="neutral-800 focus:neutral-700"
       p="3"
       w="full"
       border="1 rounded-xl neutral-800 focus:indigo-400"
