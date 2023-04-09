@@ -5,7 +5,7 @@
         y: -100,
         opacity: 0,
       },
-      visible: {
+      visibleOnce: {
         y: 0,
         opacity: 1,
         transition: {
@@ -24,7 +24,7 @@
     <img src="/images/projects/cashmode-2.png" alt="Midnite Website" pos="absolute left-1/2 bottom-0" h="full" max-w="none" transform="~ translate-x--1/2" rounded="2xl" class="opacity-10">
 
     <div pos="relative">
-      <h2 text="5xl white" font="bold" m="b-4">
+      <h2 text="3xl md:5xl white" font="bold" m="b-4">
         Play Games & Win Cash
       </h2>
 

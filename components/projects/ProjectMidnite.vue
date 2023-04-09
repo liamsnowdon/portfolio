@@ -5,7 +5,7 @@
         y: -100,
         opacity: 0,
       },
-      visible: {
+      visibleOnce: {
         y: 0,
         opacity: 1,
         transition: {
@@ -22,7 +22,7 @@
     <img src="/images/projects/midnite-mobile.png" alt="Midnite Website" h="140" rounded="2xl" display="none md:block" m="r-8">
 
     <div>
-      <h2 text="5xl white" font="bold" m="b-4">
+      <h2 text="3xl md:5xl white" font="bold" m="b-4">
         Re-imagining esports and sports betting
       </h2>
 

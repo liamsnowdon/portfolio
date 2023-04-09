@@ -5,7 +5,7 @@
         y: -100,
         opacity: 0,
       },
-      visible: {
+      visibleOnce: {
         y: 0,
         opacity: 1,
         transition: {
@@ -17,10 +17,10 @@
     bg="neutral-800" p="6 md:8"
     rounded="3xl"
   >
-    <img src="/images/projects/printed.png" alt="Printed.com Logo" h="40" rounded="2xl" m="b-8">
+    <img src="/images/projects/printed.png" alt="Printed.com Logo" h="40" rounded="2xl" m="b-4 b-8" display="none md:block">
 
     <div>
-      <h2 text="5xl white" font="bold" m="b-4">
+      <h2 text="3xl md:5xl white" font="bold" m="b-4">
         The Printed Promise
       </h2>
 

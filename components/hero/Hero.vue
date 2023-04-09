@@ -19,7 +19,7 @@
     text="center"
     style="opacity: 0;"
   >
-    <div bg="black/20" rounded="full" overflow="hidden" m="b-4">
+    <div bg="black/20" overflow="hidden" m="b-4" border="~ indigo-400 rounded-full">
       <img src="/images/memoji.png" alt="Liam Snowdon Profile Picture" h="30 md:60" w="30 md:60">
     </div>
 

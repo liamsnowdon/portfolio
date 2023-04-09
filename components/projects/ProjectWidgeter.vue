@@ -5,7 +5,7 @@
         y: -100,
         opacity: 0,
       },
-      visible: {
+      visibleOnce: {
         y: 0,
         opacity: 1,
         transition: {
@@ -18,7 +18,7 @@
     rounded="3xl"
   >
     <div>
-      <h2 text="5xl white" font="bold" m="b-4">
+      <h2 text="3xl md:5xl white" font="bold" m="b-4">
         Build Tailwind pages with <span text="blue-600">customizable widgets</span>
       </h2>
 

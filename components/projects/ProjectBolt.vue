@@ -5,7 +5,7 @@
         y: -100,
         opacity: 0,
       },
-      visible: {
+      visibleOnce: {
         y: 0,
         opacity: 1,
         transition: {
@@ -18,7 +18,7 @@
     rounded="3xl"
   >
     <div>
-      <h2 text="5xl white" font="bold" m="b-4">
+      <h2 text="3xl md:5xl white" font="bold" m="b-4">
         <span text="yellow-400">Bolt</span> - a bingo generator
       </h2>
 
