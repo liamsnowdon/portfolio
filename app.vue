@@ -60,7 +60,6 @@ useHead({
     <About />
     <Skills />
     <Contact />
-    <Blog />
     <Footer />
   </div>
 </template>
