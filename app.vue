@@ -58,14 +58,8 @@ useHead({
     <Hero />
     <Projects />
     <About />
-    <Skills />
+    <Tools />
     <Contact />
     <Footer />
   </div>
 </template>
-
-<style>
-html, body {
-  height: 100%;
-}
-</style>

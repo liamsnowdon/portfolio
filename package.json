@@ -20,6 +20,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@vueuse/motion": "^2.0.0-beta.25"
+    "@vueuse/motion": "^2.0.0-beta.25",
+    "swiper": "^9.1.0"
   }
 }
