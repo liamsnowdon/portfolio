@@ -26,7 +26,7 @@
         Build custom bingo cards then print them out or play online with your friends.
       </p>
 
-      <Button variant="bolt" href="https://bolt-bingo.netlify.app/">
+      <Button variant="bolt" href="https://bolt-bingo.netlify.app/" target="_blank">
         Start playing
       </Button>
     </div>

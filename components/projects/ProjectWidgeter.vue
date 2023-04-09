@@ -26,7 +26,7 @@
         Widgeter is a WYSIWYG editor which lets you build pages with a selection of prebuilt customizable widgets.
       </p>
 
-      <Button variant="widgeter" href="https://widgeter.dev">
+      <Button variant="widgeter" href="https://widgeter.dev" target="_blank">
         Start building
       </Button>
     </div>

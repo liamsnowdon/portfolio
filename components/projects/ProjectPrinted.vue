@@ -28,7 +28,7 @@
         With a wide range of products, Printed.com is the largest and fastest growing online print shop in the UK.
       </p>
 
-      <Button variant="printed" href="https://www.printed.com">
+      <Button variant="printed" href="https://www.printed.com" target="_blank">
         Go to website
       </Button>
     </div>

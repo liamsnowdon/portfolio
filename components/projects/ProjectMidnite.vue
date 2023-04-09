@@ -30,7 +30,7 @@
         Midnite is building a world-class esports, sports and game wagering platform for the new generation of fans.
       </p>
 
-      <Button variant="secondary" href="https://www.midnite.com">
+      <Button variant="secondary" href="https://www.midnite.com" target="_blank">
         Go to website
       </Button>
     </div>
