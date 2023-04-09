@@ -1,0 +1,10 @@
+{
+  "extends": "@antfu",
+  "rules": {
+    "space-before-function-paren": ["error", "always"],
+    "curly": ["error", "all"],
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "@typescript-eslint/brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "@typescript-eslint/space-before-function-paren": ["error", "always"]
+  }
+}
