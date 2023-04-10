@@ -14,7 +14,7 @@ export default defineConfig({
 
   shortcuts: {
     'scrollbar-stack': 'relative! top-auto! right-auto! bottom-auto! left-auto! mt-6 max-w-30 mx-auto bg-neutral-800!',
-    'scrollbar-stack-drag': 'h-full w-full relative left-0 top-0 rounded-[10px] bg-white! ',
+    'scrollbar-stack-drag': 'h-full w-full relative left-0 top-0 rounded-[10px] bg-indigo-500! ',
   },
 
   preflights: [{
