@@ -1,34 +1,13 @@
 <template>
-  <div
-    v-motion="{
-      initial: {
-        y: -100,
-        opacity: 0,
-      },
-      visibleOnce: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          delay: 500,
-        },
-      },
-    }"
-    bg="neutral-800"
-    p="6 md:8"
-    rounded="3xl"
-  >
+  <Project :delay="500" url="https://widgeter.dev">
     <div>
       <h2 text="3xl md:5xl white" font="bold" m="b-4">
         Build Tailwind pages with <span text="blue-600">customizable widgets</span>
       </h2>
 
-      <p text="lg neutral-400" m="b-4">
+      <p text="lg neutral-400">
         Widgeter is a WYSIWYG editor which lets you build pages with a selection of prebuilt customizable widgets.
       </p>
-
-      <Button variant="widgeter" href="https://widgeter.dev" target="_blank">
-        Start building
-      </Button>
     </div>
-  </div>
+  </Project>
 </template>
