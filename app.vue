@@ -48,6 +48,14 @@ useHead({
       name: 'twitter:image:alt',
       content: 'Liam Snowdon - Frontend Engineer',
     },
+    {
+      name: 'msapplication-TileColor',
+      content: '#171717',
+    },
+    {
+      name: 'theme-color',
+      content: '#171717',
+    },
   ],
 })
 </script>
