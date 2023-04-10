@@ -22,7 +22,7 @@ defineProps<Props>()
     aspect="1/1"
     space="y-4"
   >
-    <span :class="tool.icon" text="6xl" />
+    <span :class="tool.icon" text="6xl white" />
     <span text="white lg" font="bold">{{ tool.name }}</span>
   </a>
 </template>

@@ -20,7 +20,7 @@ const items = [
   { name: 'VSCode', url: 'https://code.visualstudio.com', icon: 'i-logos-visual-studio-code' },
   { name: 'Figma', url: 'https://www.figma.com', icon: 'i-logos-figma' },
   { name: 'Netlify', url: 'https://www.netlify.com', icon: 'i-logos-netlify-icon' },
-  { name: 'Github', url: 'https://github.com/liamsnowdon', icon: 'i-logos-github-icon' },
+  { name: 'Github', url: 'https://github.com/liamsnowdon', icon: 'i-carbon-logo-github' },
 ]
 </script>
 
