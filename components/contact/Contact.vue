@@ -27,7 +27,7 @@ const socials = [
           Or, fill out the form to send me a message directly.
         </p>
 
-        <div flex="~" justify="center" space="x-4">
+        <div flex="~" justify="md:center" space="x-4">
           <a
             v-for="social in socials"
             :key="social.icon"
