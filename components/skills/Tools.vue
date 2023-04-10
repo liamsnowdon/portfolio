@@ -33,7 +33,7 @@ const items = [
         </h2>
 
         <p text="lg neutral-400">
-          These are the development tools I use day to day.
+          These are the development tools I use day-to-day.
         </p>
       </div>
 

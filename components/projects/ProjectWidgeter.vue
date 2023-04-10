@@ -9,7 +9,7 @@
         y: 0,
         opacity: 1,
         transition: {
-          delay: 400,
+          delay: 500,
         },
       },
     }"

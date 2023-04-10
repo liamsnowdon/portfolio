@@ -26,7 +26,7 @@ useHead({
     },
     {
       name: 'og:image',
-      content: '',
+      content: 'https://liamsnowdon.uk/portfolio-meta-1200.png',
     },
     {
       name: 'twitter:card',
@@ -42,7 +42,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: '',
+      content: 'https://liamsnowdon.uk/portfolio-meta-1200.png',
     },
     {
       name: 'twitter:image:alt',
