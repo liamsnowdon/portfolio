@@ -18,7 +18,6 @@ defineProps<Props>()
     items="center"
     justify="center"
     rounded="xl"
-    p="8"
     bg="neutral-800 hover:neutral-700/50"
     aspect="1/1"
     space="y-4"
