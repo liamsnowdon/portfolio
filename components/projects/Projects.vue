@@ -10,8 +10,10 @@
       <ProjectCashmode grid="col-span-12 md:col-span-6 lg:col-span-8" />
       <ProjectPrinted grid="col-span-12 md:col-span-6 lg:col-span-4" />
 
-      <ProjectWidgeter grid="col-span-12 md:col-span-6" />
-      <ProjectBolt grid="col-span-12 md:col-span-6" />
+      <ProjectBolt grid="col-span-12 md:col-span-6 lg:col-span-4" />
+      <ProjectWidgeter grid="col-span-12 md:col-span-6 lg:col-span-8" />
+
+      <ProjectNookapp grid="col-span-12" />
     </Content>
   </Wrapper>
 </template>

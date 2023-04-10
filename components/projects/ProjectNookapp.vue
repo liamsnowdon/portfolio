@@ -9,7 +9,7 @@
         y: 0,
         opacity: 1,
         transition: {
-          delay: 400,
+          delay: 500,
         },
       },
     }"
@@ -17,16 +17,16 @@
     p="6 md:8"
     rounded="3xl"
   >
-    <div>
+    <div flex="~ col" items="center" text="center">
       <h2 text="3xl md:5xl white" font="bold" m="b-4">
-        <span text="yellow-400">Bolt</span> - a bingo generator
+        Nookapp - An Animal Crossing hub
       </h2>
 
       <p text="lg neutral-400" m="b-4">
-        Build custom bingo cards then print them out or play online with your friends.
+        A hub of interactive apps to use alongside the Animal Crossing: New Horizons game on Nintendo Switch to provide the best playing experience possible.
       </p>
 
-      <Button variant="bolt" href="https://bolt-bingo.netlify.app/" target="_blank">
+      <Button variant="nookapp" href="https://thenookapp.com" target="_blank">
         Start playing
       </Button>
     </div>

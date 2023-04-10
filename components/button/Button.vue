@@ -1,5 +1,5 @@
 <script setup lang="ts">
-type Variant = 'primary' | 'secondary' | 'printed' | 'widgeter' | 'bolt'
+type Variant = 'primary' | 'secondary' | 'printed' | 'widgeter' | 'bolt' | 'nookapp'
 type Size = 'small' | 'medium' | 'large'
 
 interface Props {
@@ -23,6 +23,7 @@ const classes = computed(() => {
     'bg-[#ed40a9] hover:bg-[#eb5cc1] ring-[#ed40a9] ring-offset-white text-white': props.variant === 'printed',
     'bg-blue-600 hover:bg-blue-500 ring-blue-600 text-white': props.variant === 'widgeter',
     'bg-yellow-400 hover:bg-yellow-300 ring-yellow-400 text-black': props.variant === 'bolt',
+    'bg-green-500 hover:bg-green-400 ring-green-500 text-white': props.variant === 'nookapp',
     'py-2 px-4 text-sm': props.size === 'small',
     'py-3 px-5 text-base': props.size === 'medium',
     'py-4 px-6 text-lg': props.size === 'large',
