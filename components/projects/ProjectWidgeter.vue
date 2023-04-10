@@ -1,6 +1,14 @@
 <template>
   <Project :delay="500" url="https://widgeter.dev">
-    <div>
+    <img
+      src="/images/projects/widgeter/widgeter.png"
+      alt="Widgeter Logo"
+      pos="absolute bottom--25 right--25"
+      h="75"
+      class="opacity-20"
+    >
+
+    <div pos="relative">
       <h2 text="3xl md:5xl white" font="bold" m="b-4">
         Build Tailwind pages with <span text="blue-600">customizable widgets</span>
       </h2>

@@ -1,5 +1,9 @@
 <template>
-  <Project :delay="400" url="https://bolt-bingo.netlify.app">
+  <Project
+    :delay="400"
+    url="https://bolt-bingo.netlify.app"
+    border="3 yellow-400"
+  >
     <div>
       <h2 text="3xl md:5xl white" font="bold" m="b-4">
         <span text="yellow-400">Bolt</span> - a bingo generator
