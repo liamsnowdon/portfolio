@@ -2,12 +2,10 @@
   <Project
     :delay="400"
     url="https://www.midnite.com/cashmode"
-    flex="~"
+    flex="~ col"
     items="center"
   >
-    <img src="/images/projects/cashmode.png" alt="Midnite Website" pos="absolute left-1/2 bottom-0" h="full" max-w="none" transform="~ translate-x--1/2" rounded="2xl" class="opacity-10">
-
-    <div pos="relative">
+    <div m="b-4">
       <h2 text="3xl md:5xl white" font="bold" m="b-4">
         Play Games & Win Cash
       </h2>
@@ -15,6 +13,13 @@
       <p text="lg neutral-400">
         CashMode lets you play your favourite games to win cash prizes, by completing in-game challenges.
       </p>
+    </div>
+
+    <div grid="~ cols-4 gap-4">
+      <img src="/images/projects/cashmode/csgo.png" alt="Counter-Strike" rounded="xl">
+      <img src="/images/projects/cashmode/warzone.png" alt="Warzone" rounded="xl">
+      <img src="/images/projects/cashmode/lol.png" alt="League of Legends" rounded="xl">
+      <img src="/images/projects/cashmode/valorant.png" alt="League of Legends" rounded="xl">
     </div>
   </Project>
 </template>
