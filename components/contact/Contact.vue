@@ -37,6 +37,7 @@ const socials = [
             p="2"
             bg="neutral-800 hover:neutral-700"
             border="rounded-2xl"
+            :aria-label="social.name"
             class="group"
           >
             <span :class="social.icon" display="inline-block" text="5xl neutral-400 group-hover:white" />

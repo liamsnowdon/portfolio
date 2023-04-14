@@ -20,6 +20,7 @@ const socials = [
           target="_blank"
           :class="social.icon"
           text="xl neutral-400 hover:white"
+          :aria-label="social.name"
         />
       </div>
     </Content>
