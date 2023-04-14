@@ -63,35 +63,40 @@ onMounted(() => {
       <div grid="col-span-1" pos="relative" display="none xl:block">
         <img
           ref="fish1Ref"
-          src="/images/projects/nookapp/fish-1.png"
+          src="/images/projects/nookapp/koi.png"
+          alt="Koi"
           h="28"
           pos="absolute top-0 left-0"
         >
 
         <img
           ref="fish2Ref"
-          src="/images/projects/nookapp/fish-2.png"
+          src="/images/projects/nookapp/yellow-perch.png"
+          alt="Yellow Perch"
           h="28"
           pos="absolute top-30 left-24"
         >
 
         <img
           ref="fish3Ref"
-          src="/images/projects/nookapp/fish-3.png"
+          src="/images/projects/nookapp/clown-fish.png"
+          alt="Clown Fish"
           h="28"
           pos="absolute top-12 left-48"
         >
 
         <img
           ref="fish4Ref"
-          src="/images/projects/nookapp/fish-4.png"
+          src="/images/projects/nookapp/butterfly-fish.png"
+          alt="Butterfly Fish"
           h="28"
           pos="absolute top-54 left-4"
         >
 
         <img
           ref="fish5Ref"
-          src="/images/projects/nookapp/fish-5.png"
+          src="/images/projects/nookapp/great-white-shark.png"
+          alt="Great White Shark"
           h="28"
           pos="absolute top-62 left-50"
         >
@@ -126,35 +131,40 @@ onMounted(() => {
       <div grid="col-span-1" pos="relative" display="none xl:block">
         <img
           ref="bug1Ref"
-          src="/images/projects/nookapp/bug-1.png"
+          src="/images/projects/nookapp/great-purple-emperor.png"
+          alt="Great Purple Emperor"
           h="28"
           pos="absolute top-0 right-0"
         >
 
         <img
           ref="bug2Ref"
-          src="/images/projects/nookapp/bug-2.png"
+          src="/images/projects/nookapp/orchid-mantis.png"
+          alt="Orchid Mantis"
           h="28"
           pos="absolute top-30 right-24"
         >
 
         <img
           ref="bug3Ref"
-          src="/images/projects/nookapp/bug-3.png"
+          src="/images/projects/nookapp/ladybug.png"
+          alt="Ladybug"
           h="28"
           pos="absolute top-12 right-48"
         >
 
         <img
           ref="bug4Ref"
-          src="/images/projects/nookapp/bug-4.png"
+          src="/images/projects/nookapp/red-dragonfly.png"
+          alt="Red Dragonfly"
           h="28"
           pos="absolute top-54 right-4"
         >
 
         <img
           ref="bug5Ref"
-          src="/images/projects/nookapp/bug-5.png"
+          src="/images/projects/nookapp/rosalia-batesi-beetle.png"
+          alt="Rosalia Batesi Beetle"
           h="28"
           pos="absolute top-62 right-50"
         >
