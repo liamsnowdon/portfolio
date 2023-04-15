@@ -1,176 +1,143 @@
 <script setup lang="ts">
-import { useMotion } from '@vueuse/motion'
+const row1Items = [
+  { src: 'koi', name: 'Koi' },
+  { src: 'butterfly-fish', name: 'Butterfly Fish' },
+  { src: 'clown-fish', name: 'Clown Fish' },
+  { src: 'great-white-shark', name: 'Great White Shark' },
+  { src: 'yellow-perch', name: 'Yellow Perch' },
+  { src: 'bitterling', name: 'Bitterling' },
+  { src: 'black-bass', name: 'Black Bass' },
+  { src: 'bluegill', name: 'Bluegill' },
+  { src: 'killifish', name: 'Killifish' },
+  { src: 'ranchu-goldfish', name: 'Ranchu Goldfish' },
+  { src: 'tadpole', name: 'Tadpole' },
+]
 
-const fish1Ref = ref()
-const fish2Ref = ref()
-const fish3Ref = ref()
-const fish4Ref = ref()
-const fish5Ref = ref()
+const row2Items = [
+  { src: 'common-butterfly', name: 'Common Butterfly' },
+  { src: 'honeybee', name: 'Honeybee' },
+  { src: 'tiger-butterfly', name: 'Tiger Butterfly' },
+  { src: 'yellow-butterfly', name: 'Yellow Butterfly' },
+  { src: 'rice-grasshopper', name: 'Rice Grasshopper' },
+  { src: 'great-purple-emperor', name: 'Great Purple Emperor' },
+  { src: 'ladybug', name: 'Ladybug' },
+  { src: 'orchid-mantis', name: 'Orchid Mantis' },
+  { src: 'red-dragonfly', name: 'Red Dragonfly' },
+  { src: 'rosalia-batesi-beetle', name: 'Rosalia Batesi Beetle' },
+  { src: 'tiger-beetle', name: 'Tiger Beetle' },
+  { src: 'snail', name: 'Snail' },
+]
 
-const bug1Ref = ref()
-const bug2Ref = ref()
-const bug3Ref = ref()
-const bug4Ref = ref()
-const bug5Ref = ref()
-
-const fishRefs = computed(() => [fish1Ref, fish2Ref, fish3Ref, fish4Ref, fish5Ref])
-const bugRefs = computed(() => [bug1Ref, bug2Ref, bug3Ref, bug4Ref, bug5Ref])
-
-onMounted(() => {
-  fishRefs.value.forEach((fish, index) => {
-    useMotion(fish, {
-      initial: {
-        y: 100,
-        opacity: 0,
-      },
-      visibleOnce: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: 'spring',
-          stiffness: 320,
-          damping: 20,
-          delay: 600 + (100 * index),
-        },
-      },
-    })
-  })
-
-  bugRefs.value.forEach((bug, index) => {
-    useMotion(bug, {
-      initial: {
-        y: 100,
-        opacity: 0,
-      },
-      visibleOnce: {
-        y: 0,
-        opacity: 1,
-        transition: {
-          type: 'spring',
-          stiffness: 320,
-          damping: 20,
-          delay: 600 + (100 * index),
-        },
-      },
-    })
-  })
-})
+const row3Items = [
+  { src: 'gazami-crab', name: 'Gazami Crab' },
+  { src: 'red-king-crab', name: 'Red King Crab' },
+  { src: 'starfish', name: 'Starfish' },
+  { src: 'seaslug', name: 'Seaslug' },
+  { src: 'umbrella-octopus', name: 'Umbrella Octopus' },
+  { src: 'gigas-giant-clam', name: 'Gigas Giant Clam' },
+  { src: 'octopus', name: 'Octopus' },
+  { src: 'scallop', name: 'Scallop' },
+  { src: 'sea-anemone', name: 'Sea Anemone' },
+  { src: 'sea-cucumber', name: 'Sea Cucumber' },
+  { src: 'seaweed', name: 'Seaweed' },
+]
 </script>
 
 <template>
-  <Project :delay="500" url="https://thenookapp.com">
-    <div grid="~ cols-1 xl:cols-3" m="b-12">
-      <div grid="col-span-1" pos="relative" display="none xl:block">
-        <img
-          ref="fish1Ref"
-          src="/images/projects/nookapp/koi.png"
-          alt="Koi"
-          h="28"
-          pos="absolute top-0 left-0"
-        >
-
-        <img
-          ref="fish2Ref"
-          src="/images/projects/nookapp/yellow-perch.png"
-          alt="Yellow Perch"
-          h="28"
-          pos="absolute top-30 left-24"
-        >
-
-        <img
-          ref="fish3Ref"
-          src="/images/projects/nookapp/clown-fish.png"
-          alt="Clown Fish"
-          h="28"
-          pos="absolute top-12 left-48"
-        >
-
-        <img
-          ref="fish4Ref"
-          src="/images/projects/nookapp/butterfly-fish.png"
-          alt="Butterfly Fish"
-          h="28"
-          pos="absolute top-54 left-4"
-        >
-
-        <img
-          ref="fish5Ref"
-          src="/images/projects/nookapp/great-white-shark.png"
-          alt="Great White Shark"
-          h="28"
-          pos="absolute top-62 left-50"
-        >
-      </div>
-
-      <div grid="col-span-1">
-        <img
-          v-motion="{
-            initial: {
-              y: -100,
-              scale: 0,
-              rotate: -90,
-              opacity: 0,
-            },
-            visibleOnce: {
-              y: 0,
-              scale: 1,
-              rotate: 0,
-              opacity: 1,
-              transition: {
-                delay: 800,
-              },
-            },
-          }"
-          src="/images/projects/nookapp/blathers.png"
-          alt="Blathers"
-          w="125"
-          m="x-auto"
-        >
-      </div>
-
-      <div grid="col-span-1" pos="relative" display="none xl:block">
-        <img
-          ref="bug1Ref"
-          src="/images/projects/nookapp/great-purple-emperor.png"
-          alt="Great Purple Emperor"
-          h="28"
-          pos="absolute top-0 right-0"
-        >
-
-        <img
-          ref="bug2Ref"
-          src="/images/projects/nookapp/orchid-mantis.png"
-          alt="Orchid Mantis"
-          h="28"
-          pos="absolute top-30 right-24"
-        >
-
-        <img
-          ref="bug3Ref"
-          src="/images/projects/nookapp/ladybug.png"
-          alt="Ladybug"
-          h="28"
-          pos="absolute top-12 right-48"
-        >
-
-        <img
-          ref="bug4Ref"
-          src="/images/projects/nookapp/red-dragonfly.png"
-          alt="Red Dragonfly"
-          h="28"
-          pos="absolute top-54 right-4"
-        >
-
-        <img
-          ref="bug5Ref"
-          src="/images/projects/nookapp/rosalia-batesi-beetle.png"
-          alt="Rosalia Batesi Beetle"
-          h="28"
-          pos="absolute top-62 right-50"
-        >
-      </div>
+  <Project
+    :delay="500"
+    url="https://thenookapp.com"
+    p="b-6 x-6 md:b-8 md:x-8"
+  >
+    <div
+      v-motion="{
+        initial: {
+          x: 200,
+          opacity: 0,
+        },
+        visibleOnce: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: 600,
+            duration: 500,
+          },
+        },
+      }"
+      flex="~"
+      justify="center"
+      space="x-4"
+    >
+      <img
+        v-for="item in row1Items"
+        :key="item.name"
+        :src="`/images/projects/nookapp/${item.src}.png`"
+        :alt="item.name"
+        h="26"
+        loading="lazy"
+      >
     </div>
-    <div flex="~ col" items="center" text="center">
+
+    <div
+      v-motion="{
+        initial: {
+          x: -200,
+          opacity: 0,
+        },
+        visibleOnce: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: 600,
+            duration: 500,
+          },
+        },
+      }"
+      flex="~"
+      justify="center"
+      space="x-4"
+    >
+      <img
+        v-for="item in row2Items"
+        :key="item.name"
+        :src="`/images/projects/nookapp/${item.src}.png`"
+        :alt="item.name"
+        h="26"
+        loading="lazy"
+      >
+    </div>
+
+    <div
+      v-motion="{
+        initial: {
+          x: 200,
+          opacity: 0,
+        },
+        visibleOnce: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: 600,
+            duration: 500,
+          },
+        },
+      }"
+      flex="~"
+      justify="center"
+      space="x-4"
+      m="b-4"
+    >
+      <img
+        v-for="item in row3Items"
+        :key="item.name"
+        :src="`/images/projects/nookapp/${item.src}.png`"
+        :alt="item.name"
+        h="26"
+        loading="lazy"
+      >
+    </div>
+
+    <div text="center">
       <h2 text="3xl md:5xl white" font="bold" m="b-4">
         NookApp - an Animal Crossing hub
       </h2>
