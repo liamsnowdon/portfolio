@@ -2,7 +2,7 @@
   <Project
     :delay="200"
     url="https://www.midnite.com"
-    p="t-8 x-6 md:t-32 md:x-8"
+    p="t-8 x-6 md:t-18 md:x-8"
   >
     <div
       pos="absolute inset-0"
@@ -27,7 +27,7 @@
         Midnite is building a world-class esports, sports and game wagering platform for the new generation of fans.
       </p>
 
-      <div flex="~" items="start" justify="center" max-h="100">
+      <div flex="~" items="start" justify="center" max-h="132 md:165">
         <img
           v-motion="{
             initial: {
