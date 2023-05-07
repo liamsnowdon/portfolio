@@ -13,7 +13,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development. I have a keen eye for detail and am passionate about delivering high-quality and pixel-perfect designs.',
+      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development with a keen eye for detail.',
     },
     {
       name: 'og:title',
@@ -21,7 +21,7 @@ useHead({
     },
     {
       name: 'og:description',
-      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development. I have a keen eye for detail and am passionate about delivering high-quality and pixel-perfect designs.',
+      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development with a keen eye for detail.',
     },
     {
       name: 'og:type',
@@ -41,7 +41,7 @@ useHead({
     },
     {
       name: 'twitter:description',
-      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development. I have a keen eye for detail and am passionate about delivering high-quality and pixel-perfect designs.',
+      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development with a keen eye for detail.',
     },
     {
       name: 'twitter:image',
