@@ -18,9 +18,9 @@
     "@antfu/eslint-config": "^0.38.4",
     "@iconify-json/carbon": "^1.1.16",
     "@iconify-json/logos": "^1.1.24",
-    "@unocss/nuxt": "^0.50.8",
+    "@unocss/nuxt": "^0.55.0",
     "eslint": "^8.38.0",
-    "nuxt": "^3.3.3",
+    "nuxt": "^3.6.5",
     "typescript": "^5.0.4"
   }
 }
