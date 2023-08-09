@@ -71,6 +71,7 @@ useHead({
     <About />
     <Tools />
     <Contact />
+    <Blog />
     <Footer />
   </div>
 </template>
