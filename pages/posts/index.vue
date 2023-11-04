@@ -9,7 +9,7 @@ const { data: posts } = await useAsyncData('posts', () => {
 
 <template>
   <Wrapper>
-    <Content space="y-8">
+    <WrapperContent space="y-8">
       <div text="left md:center" space="y-4">
         <h1 text="4xl md:6xl white" font="bold">
           Posts
@@ -19,6 +19,6 @@ const { data: posts } = await useAsyncData('posts', () => {
       <div grid="~ cols-2 gap-8">
         <Post v-for="post in posts" :key="post.name" :post="post" />
       </div>
-    </Content>
+    </WrapperContent>
   </Wrapper>
 </template>

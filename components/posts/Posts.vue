@@ -10,7 +10,7 @@ const { data: posts } = await useAsyncData('posts', () => {
 
 <template>
   <Wrapper>
-    <Content space="y-8">
+    <WrapperContent space="y-8">
       <div text="left md:center" space="y-4">
         <h2 text="3xl white" font="bold">
           Latest posts
@@ -26,6 +26,6 @@ const { data: posts } = await useAsyncData('posts', () => {
           View all
         </Button>
       </div>
-    </Content>
+    </WrapperContent>
   </Wrapper>
 </template>

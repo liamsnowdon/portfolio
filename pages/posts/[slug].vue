@@ -14,7 +14,7 @@ useHead({
 
 <template>
   <Wrapper>
-    <Content>
+    <WrapperContent>
       <ContentDoc>
         <template #default="{ doc: post }">
           <article>
@@ -32,6 +32,6 @@ useHead({
           <h1>Document not found</h1>
         </template>
       </ContentDoc>
-    </Content>
+    </WrapperContent>
   </Wrapper>
 </template>

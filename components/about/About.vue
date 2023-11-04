@@ -1,6 +1,6 @@
 <template>
   <Wrapper id="about">
-    <Content grid="~ cols-1 md:cols-2 gap-8" items="center">
+    <WrapperContent grid="~ cols-1 md:cols-2 gap-8" items="center">
       <div grid="col-span-2" space="y-4">
         <h2 text="3xl white" font="bold">
           Want to know more about me?
@@ -18,6 +18,6 @@
           When I'm not building cool stuff, I enjoy video games... like a LOT. Considering the amount of time I've sunk into Overwatch I should be way better at the game, but I'm still having fun so who's the real winner here? 😉
         </p>
       </div>
-    </Content>
+    </WrapperContent>
   </Wrapper>
 </template>
