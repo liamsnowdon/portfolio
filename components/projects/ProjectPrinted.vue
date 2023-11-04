@@ -1,5 +1,5 @@
 <template>
-  <Project :delay="500" url="https://www.printed.com">
+  <Project :delay="400" url="https://www.printed.com">
     <img src="/images/projects/printed.png" alt="Printed.com Logo" h="22 md:30" rounded="2xl" m="b-4">
 
     <div>
