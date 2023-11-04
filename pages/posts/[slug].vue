@@ -1,27 +1,28 @@
 <script setup lang="ts">
-const { data: post } = await useAsyncData('posts', () => {
-  return queryContent('posts')
-    .where({
-      slug: useRoute().params.slug,
-    })
-    .findOne()
-})
+// const { data: post } = await useAsyncData('posts', () => {
+//   return queryContent('posts')
+//     .where({
+//       slug: useRoute().params.slug,
+//     })
+//     .findOne()
+// })
 </script>
 
 <template>
   <div>
-    <ContentRenderer :value="post">
-      <template #default>
-        <h1 text="4xl white" font="bold">
-          {{ post.name }}
-        </h1>
-
-        <ContentRendererMarkdown :value="post" space="y-4" />
+    <ContentDoc>
+      <template #default="{ doc }">
+        <article>
+          <h1 text="3xl white" font="bold">
+            {{ doc.title }}
+          </h1>
+          <ContentRenderer :value="doc" space="y-4" />
+        </article>
       </template>
 
-      <template #empty>
-        <p>No post found.</p>
+      <template #not-found>
+        <h1>Document not found</h1>
       </template>
-    </ContentRenderer>
+    </ContentDoc>
   </div>
 </template>
