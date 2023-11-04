@@ -16,12 +16,15 @@ useHead({
   <Wrapper>
     <Content>
       <ContentDoc>
-        <template #default="{ doc }">
+        <template #default="{ doc: post }">
           <article>
-            <h1 text="4xl md:6xl white" font="bold" m="b-8">
-              {{ doc.title }}
-            </h1>
-            <ContentRenderer :value="doc" space="y-4" />
+            <div m="b-8">
+              <h1 text="4xl md:6xl white" font="bold" m="b-4">
+                {{ post.title }}
+              </h1>
+              <p>{{ post.readingTime.text }} • Posted on {{ $dayjs(post.posted_at).format('MMM DD, YYYY') }}</p>
+            </div>
+            <ContentRenderer :value="post" space="y-4" />
           </article>
         </template>
 

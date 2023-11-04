@@ -23,6 +23,7 @@
     "dayjs-nuxt": "^2.1.9",
     "eslint": "^8.46.0",
     "nuxt": "^3.6.5",
+    "remark-reading-time": "^2.0.1",
     "typescript": "^5.0.4"
   }
 }

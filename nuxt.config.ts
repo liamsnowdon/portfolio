@@ -15,4 +15,14 @@ export default defineNuxtConfig({
   css: [
     '@unocss/reset/tailwind.css',
   ],
+
+  content: {
+    highlight: {
+      theme: 'github-dark',
+    },
+
+    markdown: {
+      remarkPlugins: ['remark-reading-time'],
+    },
+  },
 })

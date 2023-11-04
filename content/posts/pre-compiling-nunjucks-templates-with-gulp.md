@@ -5,7 +5,6 @@ slug: pre-compiling-nunjucks-templates-with-gulp
 title: Pre-compiling Nunjucks templates with Gulp
 category: javascript
 tags: ['workflow']
-reading_time: 5
 intro: Nunjucks is great for templating your HTML, but it's even better when that markup is pre-compiled at build time.
 ---
 

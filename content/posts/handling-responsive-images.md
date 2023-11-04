@@ -5,7 +5,6 @@ slug: handling-responsive-images
 title: Handling responsive images
 category: html
 tags: ['responsive']
-reading_time: 5
 intro: Sometimes we want an image to look slightly different across devices or show a different image entirely.
 ---
 

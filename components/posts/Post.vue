@@ -28,7 +28,7 @@ defineProps<{
 
     <div flex="~" justify="between" space="x-4">
       <p text="sm">
-        {{ post.reading_time }} min read
+        {{ post.readingTime.text }}
       </p>
       <p text="sm">
         {{ $dayjs(post.posted_at).format('DD/MM/YYYY') }}
