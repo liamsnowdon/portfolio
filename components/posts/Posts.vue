@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: posts } = await useAsyncData('posts', () => {
+const { data: posts } = await useAsyncData('latest_posts', () => {
   return queryContent('posts')
     .only(['title', 'posted_at', 'slug', 'intro', 'readingTime'])
     .limit(4)
