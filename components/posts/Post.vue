@@ -7,14 +7,24 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLink :to="`/posts/${post.slug}`" bg="neutral-800 hover:neutral-700/50" rounded="2xl" p="8">
-    <h3 text="2xl white" font="bold" m="b-2">
-      {{ post.title }}
-    </h3>
+  <NuxtLink
+    :to="`/posts/${post.slug}`"
+    flex="~ col"
+    bg="neutral-800 hover:neutral-700/50 focus:neutral-700/50"
+    ring="focus:2 neutral-800 offset-neutral-700 offset-2"
+    outline="none"
+    rounded="2xl"
+    p="8"
+  >
+    <div flex="1" m="b-6">
+      <h3 text="2xl white" font="bold" m="b-2">
+        {{ post.title }}
+      </h3>
 
-    <p m="b-6">
-      {{ post.intro }}
-    </p>
+      <p>
+        {{ post.intro }}
+      </p>
+    </div>
 
     <div flex="~" justify="between" space="x-4">
       <p text="sm">

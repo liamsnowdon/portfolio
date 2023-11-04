@@ -14,7 +14,7 @@ const socials = [
 </script>
 
 <template>
-  <Wrapper id="contact">
+  <Wrapper id="contact" border="t neutral-800">
     <Content>
       <div text="left md:center" space="y-4" m="b-8">
         <h2 text="3xl white" font="bold">

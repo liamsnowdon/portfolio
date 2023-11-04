@@ -13,20 +13,22 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <ContentDoc>
-      <template #default="{ doc }">
-        <article>
-          <h1 text="3xl white" font="bold">
-            {{ doc.title }}
-          </h1>
-          <ContentRenderer :value="doc" space="y-4" />
-        </article>
-      </template>
+  <Wrapper>
+    <Content>
+      <ContentDoc>
+        <template #default="{ doc }">
+          <article>
+            <h1 text="4xl md:6xl white" font="bold" m="b-8">
+              {{ doc.title }}
+            </h1>
+            <ContentRenderer :value="doc" space="y-4" />
+          </article>
+        </template>
 
-      <template #not-found>
-        <h1>Document not found</h1>
-      </template>
-    </ContentDoc>
-  </div>
+        <template #not-found>
+          <h1>Document not found</h1>
+        </template>
+      </ContentDoc>
+    </Content>
+  </Wrapper>
 </template>

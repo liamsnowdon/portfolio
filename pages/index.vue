@@ -56,13 +56,10 @@ useHead({
 
 <template>
   <div>
-    <Navbar />
     <Hero />
     <Projects />
     <About />
     <Tools />
     <Posts />
-    <Contact />
-    <Footer />
   </div>
 </template>
