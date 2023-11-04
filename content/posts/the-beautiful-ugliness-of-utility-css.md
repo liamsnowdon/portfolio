@@ -3,10 +3,11 @@ id: 8
 posted_at: 2022-07-04T00:00:00.000Z
 slug: the-beautiful-ugliness-of-utility-css
 title: The Beautiful Ugliness of Utility CSS
+intro: In 2021, I started looking for a new frontend role. When it came to CSS, my background was a standard Sass pre-processor setup for CSS for work and personal projects. My go-to would be the 7-1 architecture pattern.
 reading_time: 5
 ---
 
-In 2021, I started looking for a new frontend role. When it came to CSS, my background was a standard Sass pre-processor setup for CSS for work and personal projects. My go-to would be the 7-1 architecture pattern, as mentioned in my [previous blog post](https://blog.liamsnowdon.uk/posts/using-the-7-1-pattern-for-better-sass-architecture). While it did the job, there were problems with it.
+In 2021, I started looking for a new frontend role. When it came to CSS, my background was a standard Sass pre-processor setup for CSS for work and personal projects. My go-to would be the 7-1 architecture pattern. While it did the job, there were problems with it.
 
 The biggest issue was the huge amount of CSS rules you could end up shipping. Think about how many times you write `display: flex` in a project; this could easily end up in the hundreds depending on the size of the codebase. There are some tools you can use to optimise the CSS you ship to production: minimising the stylesheet like you do with JavaScript, grouping media queries, and purging unused CSS rules; PostCSS helps a huge deal with this.
 

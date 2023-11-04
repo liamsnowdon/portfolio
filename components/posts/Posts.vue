@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData('posts', () => {
   return queryContent('posts')
-    .only(['title', 'posted_at', 'slug'])
+    .only(['title', 'posted_at', 'slug', 'intro', 'reading_time'])
     .limit(5)
     .find()
 })
@@ -16,7 +16,7 @@ const { data: posts } = await useAsyncData('posts', () => {
         </h2>
       </div>
 
-      <div max-w="screen-lg" m="x-auto">
+      <div grid="~ cols-2 gap-8">
         <Post v-for="post in posts" :key="post.name" :post="post" />
       </div>
     </Content>
