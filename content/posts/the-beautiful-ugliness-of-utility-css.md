@@ -2,7 +2,7 @@
 id: 8
 posted_at: 2022-07-04T00:00:00.000Z
 slug: the-beautiful-ugliness-of-utility-css
-name: The Beautiful Ugliness of Utility CSS
+title: The Beautiful Ugliness of Utility CSS
 reading_time: 5
 ---
 

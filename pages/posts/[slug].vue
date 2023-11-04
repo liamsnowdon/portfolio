@@ -14,7 +14,7 @@
       <template #default="{ doc }">
         <article>
           <h1 text="3xl white" font="bold">
-            {{ doc.name }}
+            {{ doc.title }}
           </h1>
           <ContentRenderer :value="doc" space="y-4" />
         </article>

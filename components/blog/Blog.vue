@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData('posts', () => {
   return queryContent('posts')
-    .only(['name', 'posted_at', 'slug'])
+    .only(['title', 'posted_at', 'slug'])
     .limit(5)
     .find()
 })
