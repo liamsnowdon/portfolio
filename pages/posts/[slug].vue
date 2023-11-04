@@ -10,10 +10,18 @@ const { data: post } = await useAsyncData('posts', () => {
 
 <template>
   <div>
-    <h1 text="4xl white" font="bold">
-      {{ post.name }}
-    </h1>
+    <ContentRenderer :value="post">
+      <template #default>
+        <h1 text="4xl white" font="bold">
+          {{ post.name }}
+        </h1>
 
-    <ContentRenderer :value="post" space="y-4" />
+        <ContentRendererMarkdown :value="post" space="y-4" />
+      </template>
+
+      <template #empty>
+        <p>No post found.</p>
+      </template>
+    </ContentRenderer>
   </div>
 </template>
