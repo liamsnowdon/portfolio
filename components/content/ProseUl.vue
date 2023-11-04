@@ -1,5 +1,5 @@
 <template>
-  <ul>
+  <ul text="lg">
     <slot />
   </ul>
 </template>

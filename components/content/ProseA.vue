@@ -16,7 +16,7 @@ defineProps({
   <NuxtLink
     :href="href"
     :target="target"
-    class="text-indigo-500 hover:text-indigo-400"
+    class="text-indigo-500 hover:text-indigo-400 text-lg"
   >
     <slot />
   </NuxtLink>

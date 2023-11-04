@@ -9,10 +9,9 @@ function setIframeHeight (e: MessageEvent) {
   const data = e.data
 
   if (typeof data === 'string' && data.includes('ciu_embed')) {
-    const featureID = data.split(':')[1]
-    const height = data.split(':')[2]
+    const [_, featureId, height] = data.split(':')
 
-    if (props.feature === featureID) {
+    if (props.feature === featureId) {
       const iframeHeight = Number(height) + 30
       embed.value!.height = `${iframeHeight}px`
     }
