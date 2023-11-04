@@ -4,7 +4,7 @@ posted_at: 2022-07-04T00:00:00.000Z
 slug: the-beautiful-ugliness-of-utility-css
 title: The Beautiful Ugliness of Utility CSS
 category: css
-tags: ['sass']
+tags: []
 intro: In 2021, I started looking for a new frontend role. When it came to CSS, my background was a standard Sass pre-processor setup for CSS for work and personal projects. My go-to would be the 7-1 architecture pattern.
 ---
 
@@ -20,7 +20,7 @@ Sure, some basic utility classes can be seen as that, let's take a simple text-b
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-
+}
 ```
 
 Not only can this be combined with an opacity, such as `text-blue-500/50` to apply 50% opacity to the text, it also uses the value defined in the Tailwind config. This means that if we ever want to change the value of this colour, we can change it in the config and everywhere the class is used, the colour will use the new value. 

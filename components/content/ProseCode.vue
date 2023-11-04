@@ -28,10 +28,16 @@ export default defineComponent({
 </script>
 
 <template>
-  <slot />
+  <div bg="black/20" p="8" rounded="2xl" m="y-7">
+    <slot />
+  </div>
 </template>
 
 <style>
+pre {
+  overflow: auto;
+}
+
 pre code .line {
   display: block;
   min-height: 1rem;

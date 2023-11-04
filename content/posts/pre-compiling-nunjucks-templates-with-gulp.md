@@ -31,7 +31,7 @@ Nunjucks templates can inherit or **extend** from its parent template. This allo
 
 A parent template may look like this:
 
-```html
+```twig
 <!-- base.njk -->
 
 <!DOCTYPE html>
@@ -53,7 +53,7 @@ A parent template may look like this:
 
 You will see there are two blocks above: **pageTitle** and **content**. Blocks are sections that can be overridden by child templates. Let's see how that works with the **extends** tag.
 
-```html
+```twig
 <!-- product-listing.njk -->
 
 {% extends "base.njk" %}
@@ -99,7 +99,7 @@ The **extends** tag is used to tell Nunjucks what file to inherit from as its pa
 
 One of the most popular features of templating engines is the ability to include partials into your templates. These are commonly headers, navigations, pods, footers, etc. This is done by using the **include** tag, like this:
 
-```html
+```twig
 {% include "partials/sticky-navigation.njk" %}
 ```
 
@@ -109,7 +109,7 @@ This would inject that partial template wherever it is used. Oftentimes though y
 
 Macros can be thought of as partials that have access to the data that you pass it when it is called. It is called similarly to a standard function where you pass in the data as a parameter. Consider this macro:
 
-```html
+```twig
 <!-- product-macro.njk -->
 
 {% macro pod(product) %}
@@ -131,7 +131,7 @@ Macros can be thought of as partials that have access to the data that you pass 
 
 This product pod displays the product's image, name, description and a link to the product page. We can now use this macro in our templates. If it's used in a different file it will need to be imported using the **import** tag. It is then called like a standard function.
 
-```html
+```twig
 <!-- business-cards.njk -->
 
 {% extends 'product-page.njk' %}
@@ -172,7 +172,7 @@ You can see how powerful macros can be when rendering partials with custom data.
 
 Filters are another powerful feature of Nunjucks and allow you to manipulate data to JavaScript's limit. There are a number of built-in filters in Nunjucks but you are able to add custom filters for your particular needs. It uses the same syntax as filters from popular frameworks like Vue and Angular:
 
-```html
+```twig
 <!-- index.njk -->
 
 <!-- built in filter for transforming string to lowercase -->
@@ -276,7 +276,7 @@ environment.addFilter('getById', (array, id) => {
 
 Now we can make use of that filter in Nunjucks tags.
 
-```html
+```twig
 <!-- this will return the business cards object from products.json -->
 {% set product = data.products | getById(1) %}
 ```
