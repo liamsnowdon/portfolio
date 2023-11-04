@@ -6,6 +6,10 @@
 //     })
 //     .findOne()
 // })
+
+useHead({
+  titleTemplate: '%s - Liam Snowdon',
+})
 </script>
 
 <template>
