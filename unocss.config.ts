@@ -24,13 +24,18 @@ export default defineConfig({
   },
 
   preflights: [{
-    getCSS: () => `
+    getCSS: ({ theme }) => `
       html, body {
         height: 100%;
       }
 
       html {
         scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: ${theme.colors.neutral[900]};
+        color: ${theme.colors.neutral[400]};
       }
     `,
   }],

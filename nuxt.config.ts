@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@unocss/nuxt',
     '@vueuse/motion/nuxt',
+    'dayjs-nuxt',
   ],
 
   components: [{

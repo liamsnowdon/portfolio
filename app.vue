@@ -64,14 +64,5 @@ useHead({
 </script>
 
 <template>
-  <div bg="neutral-900">
-    <Navbar />
-    <Hero />
-    <Projects />
-    <About />
-    <Tools />
-    <Contact />
-    <Blog />
-    <Footer />
-  </div>
+  <NuxtPage />
 </template>
