@@ -1,5 +1,8 @@
 <script setup lang="ts">
-
+const startDate = new Date('2016-08-26')
+const currentDate = new Date()
+const diffTime = currentDate.valueOf() - startDate.valueOf()
+const experience = Math.round(diffTime / (1000 * 60 * 60 * 24 * 365))
 </script>
 
 <template>
@@ -79,7 +82,7 @@
       }"
       text="lg md:2xl indigo-500" font="semibold" m="b-8"
     >
-      6+ years of experience building cool stuff
+      {{ experience }} years of experience building cool stuff
     </p>
 
     <Button
