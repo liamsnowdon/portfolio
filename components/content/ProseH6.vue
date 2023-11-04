@@ -8,7 +8,7 @@ const generate = anchorLinks?.depth >= heading && !anchorLinks?.exclude.includes
 </script>
 
 <template>
-  <h6 :id="id">
+  <h6 :id="id" text="lg white" font="bold">
     <a v-if="id && generate" :href="`#${id}`">
       <slot />
     </a>
