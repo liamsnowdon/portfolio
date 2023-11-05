@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { getExperience } from '~~/utils'
+
+const experience = getExperience()
+</script>
+
 <template>
   <Wrapper id="about">
     <WrapperContent grid="~ cols-1 md:cols-2 gap-8" items="center">
@@ -7,7 +13,7 @@
         </h2>
 
         <p text="lg neutral-400">
-          I'm a frontend engineer with over 6 years of commercial experience in web development. My journey started with AngularJS and jQuery, but I quickly fell in love with the simplicity and ease of use of Vue.js.
+          I'm a frontend engineer with over {{ experience }} years of commercial experience in web development. My journey started with AngularJS and jQuery, but I quickly fell in love with the simplicity and ease of use of Vue.js.
         </p>
 
         <p text="lg neutral-400">

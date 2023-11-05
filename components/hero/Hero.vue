@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const startDate = new Date('2016-08-26')
-const currentDate = new Date()
-const diffTime = currentDate.valueOf() - startDate.valueOf()
-const experience = Math.round(diffTime / (1000 * 60 * 60 * 24 * 365))
+import { getExperience } from '~~/utils'
+
+const experience = getExperience()
 </script>
 
 <template>
