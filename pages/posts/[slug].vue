@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: post } = await useAsyncData('posts', () => {
+const { data: post } = await useAsyncData('post', () => {
   return queryContent('posts')
     .where({
       slug: useRoute().params.slug,
