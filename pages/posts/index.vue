@@ -56,6 +56,7 @@ function resetFilters () {
 
           <button
             v-if="category || tag"
+            type="button"
             text="indigo-500 hover:indigo-400 sm"
             font="light"
             @click="resetFilters"
@@ -70,11 +71,33 @@ function resetFilters () {
         </div>
       </div>
 
-      <div v-if="posts" space="y-4 md:y-8">
+      <div v-if="posts.length" space="y-4 md:y-8">
         <Post v-for="post in posts" :key="post.name" :post="post" />
       </div>
 
-      <div v-else />
+      <div
+        v-else
+        flex="~ col md:row"
+        justify="center"
+        items="center"
+        text="center md:left"
+        space="y-4 md:x-12 md:y-0"
+      >
+        <div flex="none">
+          <img src="/images/shrug-memoji.png" alt="Shrugging Liam Snowdon Memoji" h="30 md:60" w="30 md:60">
+        </div>
+
+        <div space="y-4">
+          <h2 text="3xl white" font="bold">
+            No posts matching your filters
+          </h2>
+          <p>
+            Try changing your selections or <button type="button" text="indigo-500 hover:indigo-400" font="light" @click="resetFilters">
+              resetting
+            </button>.
+          </p>
+        </div>
+      </div>
     </WrapperContent>
   </Wrapper>
 </template>
