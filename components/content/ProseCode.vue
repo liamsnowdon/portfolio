@@ -49,11 +49,12 @@ function copyToClipboard () {
 
         <button
           v-else
+          flex="inline"
           type="button"
-          text="xl neutral-400 hover:white"
-          class="i-carbon-copy"
           @click="copyToClipboard"
-        />
+        >
+          <span class="i-carbon-copy" text="xl neutral-400 hover:white" />
+        </button>
       </div>
     </div>
 
