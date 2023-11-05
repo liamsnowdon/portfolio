@@ -86,7 +86,7 @@ useHead({
               <p>
                 I couldn't find a post here, let's head <NuxtLink to="/posts" class="text-indigo-500 hover:text-indigo-400">
                   back
-                </NuxtLink>.
+                </NuxtLink>
               </p>
             </div>
           </div>

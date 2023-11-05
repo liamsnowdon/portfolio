@@ -97,7 +97,7 @@ function resetFilters () {
           <p>
             Try changing your selections or <button type="button" text="indigo-500 hover:indigo-400" font="light" @click="resetFilters">
               resetting
-            </button>.
+            </button>
           </p>
         </div>
       </div>
