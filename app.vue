@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { getExperience } from '~~/utils'
+
+const experience = getExperience()
+
 useHead({
   link: [
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
@@ -12,7 +16,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development and a keen eye for detail.',
+      content: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
     },
     {
       name: 'og:title',
@@ -20,7 +24,7 @@ useHead({
     },
     {
       name: 'og:description',
-      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development and a keen eye for detail.',
+      content: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
     },
     {
       name: 'og:type',
@@ -40,7 +44,7 @@ useHead({
     },
     {
       name: 'twitter:description',
-      content: 'I\'m a frontend engineer with over 6 years of commercial experience in web development and a keen eye for detail.',
+      content: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
     },
     {
       name: 'twitter:image',
