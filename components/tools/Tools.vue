@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { A11y, Autoplay, Scrollbar } from 'swiper'
+import { A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 import 'swiper/css/a11y'
 import 'swiper/css/scrollbar'
+import 'swiper/css/mousewheel'
 
 const items = [
   { name: 'Nuxt.js', url: 'https://nuxtjs.org', icon: 'i-logos-nuxt-icon' },
@@ -39,7 +40,7 @@ const items = [
 
       <ClientOnly>
         <Swiper
-          :modules="[A11y, Autoplay, Scrollbar]"
+          :modules="[A11y, Autoplay, Scrollbar, Mousewheel]"
           :slides-per-view="2"
           :space-between="16"
           :breakpoints="{
@@ -64,6 +65,10 @@ const items = [
             dragClass: 'scrollbar-stack-drag',
             draggable: true,
             hide: false,
+          }"
+          :mousewheel="{
+            thresholdDelta: 10,
+            forceToAxis: true,
           }"
         >
           <SwiperSlide v-for="item in items" :key="item.name" aspect="1/1">
