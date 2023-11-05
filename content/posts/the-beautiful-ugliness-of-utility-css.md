@@ -1,6 +1,6 @@
 ---
 id: 7
-posted_at: 2022-07-04T00:00:00.000Z
+posted_at: 2023-11-05T00:00:00.000Z
 slug: the-beautiful-ugliness-of-utility-css
 title: The Beautiful Ugliness of Utility CSS
 category: css
@@ -10,7 +10,7 @@ intro: In 2021, I started looking for a new frontend role. When it came to CSS, 
 
 In 2021, I started looking for a new frontend role. When it came to CSS, my background was a standard Sass pre-processor setup for CSS for work and personal projects. My go-to would be the 7-1 architecture pattern. While it did the job, there were problems with it.
 
-The biggest issue was the huge amount of CSS rules you could end up shipping. Think about how many times you write `display: flex` in a project; this could easily end up in the hundreds depending on the size of the codebase. There are some tools you can use to optimise the CSS you ship to production: minimising the stylesheet like you do with JavaScript, grouping media queries, and purging unused CSS rules; PostCSS helps a huge deal with this.
+The biggest issue was the huge amount of CSS rules you could end up shipping. Think about how many times you write `display: flex` in a project; this could easily end up in the hundreds depending on the size of the codebase. There are some tools you can use to optimise the CSS you ship to production: minimising the stylesheet like you do with JavaScript, grouping media queries, and purging unused CSS rules; PostCSS helps a huge deal with this. These only apply to production for the most part, it still left a bit of a sour taste in my mouth from a developer experience point of view.
 
 The role I landed at used Nuxt and TypeScript, with Tailwind CSS. I had never worked with a utlity-first CSS framework before; the closest I had come to one is having a `_utility.scss` file which contained rules that I would regularly use like `ml-4`, `p-6`, `d-block`, `p-relative`, etc. At first, I had the view I feel most people have before using one, **it makes the HTML messy**, at least compared to having a single class on an element like you normally would. Another argument I get from people when I tell them how great utility-first CSS frameworks are **"it's just inline styles"**, and I'll admit, I thought the same before I started using them.
 
@@ -23,9 +23,9 @@ Sure, some basic utility classes can be seen as that, let's take a simple text-b
 }
 ```
 
-Not only can this be combined with an opacity, such as `text-blue-500/50` to apply 50% opacity to the text, it also uses the value defined in the Tailwind config. This means that if we ever want to change the value of this colour, we can change it in the config and everywhere the class is used, the colour will use the new value. 
+Not only can this be combined with an opacity, such as `text-blue-500/50` to apply 50% opacity to the text, it also uses the value defined in the Tailwind config. This means that if we ever want to change the value of this colour, we can change it in the config and everywhere the class is used, the colour will use the new value, but you can do this with Sass variables or CSS custom properties so that's nothing new.
 
-And that's only the basic use of utility classes. They get really powerful when used with "variants". Variants allow you to style elements based on pseudo-classes, like :hover and :disabled, and media queries. For example, you can create a box that has different padding across breakpoints which changes colour on hover like this:
+They do however get really powerful when used with "variants". Variants allow you to style elements based on pseudo-classes, like :hover and :disabled, and media queries. For example, you can create a box that has different padding across breakpoints which changes colour on hover like this:
 
 ```html [index.html]
 <div class="p-4 md:p-8 lg:p-12 bg-blue-200 hover:bg-blue-400"></div>
@@ -41,7 +41,7 @@ Naturally though, some elements will contain quite a long list of classes. A typ
 </button>
 ```
 
-Yep, that's 20 classes on there. It's messy and **can be hard to find a particular class** if you want to update its styles. While there's no real way around this, Utility CSS frameworks can make dealing with these situations a lot easier.
+Yep, that's 20 classes on there. It's messy and **can be hard to find a particular class** if you want to update its styles. While writing the component at first may have been fast because it's using utility classes, it makes maintenance harder.
 
 ## Attributify Mode
 
@@ -68,8 +68,12 @@ Windi CSS, another Utility CSS framework, introduced a way of writing Utility CS
 </button>
 ```
 
-By grouping styles under attributes, it makes it a lot easier to understand what styles are being applied to the element.
+By grouping styles under attributes, it makes it a lot easier to maintain and understand what styles are being applied to the element. Windi CSS was initially an experiment to see what could be done to improve the compilation time and hot reload speeds of apps using Tailwind. It worked by scanning files and generating utilites on demand to be able to provide faster load times and HMR in development. It later helped inspire the JIT mode that was introduced to Tailwind not long after.
 
-I've been using utility-first CSS, whether it be Tailwind CSS or Windi CSS, for about a year now and I can't imagine not using it at this point. Sure, it has its cons, just like everything, but the benefits I get from using it far outweighs them compared to other solutions. I'm **building components faster than ever**, need to set up **a very minimal configuration** and it **works with JavaScript frameworks like Vue really well**. I'm also only shipping CSS that I'm actually using, and since each class is one CSS property, they are reused across the application leaving the stylesheet in production as small as possible.
+While Windi CSS has been laid to rest, Uno CSS rose from the ashes to provide even faster performance, boasting 5x faster speed than Windi CSS and Tailwind JIT. It provides awesome features such as attributify mode and pure CSS icons. This is what I use now and it makes it a joy to work with CSS again.
 
-I've probably written less than 20 lines of actual CSS since I adopted using it, and I'm all the better for it.
+## Conclusion
+
+I've been using utility-first CSS, whether it be Tailwind CSS or Windi CSS, for about almost 3 years now and I can't imagine not using it at this point. Sure, it has its cons, but the benefits I get from using it far outweighs them compared to other solutions. I'm **building components faster than ever**, need to set up **a very minimal configuration** and it **works with JavaScript frameworks like Vue really well**. I'm also only shipping CSS that I'm actually using, and since each class is one CSS property, they are reused across the application leaving the stylesheet in production as small as possible.
+
+I've written only a handful of actual CSS since I adopted using it, and I'm all the better for it.
