@@ -14,8 +14,8 @@ const socials = [
 </script>
 
 <template>
-  <Wrapper id="contact">
-    <Content>
+  <Wrapper id="contact" border="t neutral-800">
+    <WrapperContent>
       <div text="left md:center" space="y-4" m="b-8">
         <h2 text="3xl white" font="bold">
           Get in touch!
@@ -86,6 +86,6 @@ const socials = [
           </Button>
         </div>
       </form>
-    </Content>
+    </WrapperContent>
   </Wrapper>
 </template>
