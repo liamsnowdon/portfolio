@@ -14,7 +14,7 @@ defineProps<{
     ring="focus:2 neutral-800 offset-neutral-700 offset-2"
     outline="none"
     rounded="2xl"
-    p="8"
+    p="4 md:6"
   >
     <div flex="1" m="b-6">
       <h3 text="2xl white" font="bold" m="b-2">

@@ -29,7 +29,7 @@ useHead({
               </h1>
               <p>{{ post.readingTime.text }} • Posted on {{ $dayjs(post.posted_at).format('MMM DD, YYYY') }}</p>
             </div>
-            <ContentRenderer :value="post" space="y-4" />
+            <ContentRenderer :value="post" />
           </article>
         </template>
 
