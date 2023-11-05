@@ -10,11 +10,11 @@
     </NuxtLink>
 
     <div flex="~" justify="end" space="x-4">
-      <NuxtLink to="/posts" class="text-indigo-500 hover:text-indigo-400" flex="inline" items="center" font="bold" h="full">
+      <NuxtLink to="/posts" class="text-indigo-500 hover:text-indigo-400" flex="inline" items="center" font="bold" h="full" m="t-2">
         Posts
       </NuxtLink>
 
-      <a href="#contact" class="text-indigo-500 hover:text-indigo-400" flex="inline" items="center" font="bold" h="full">
+      <a href="#contact" class="text-indigo-500 hover:text-indigo-400" flex="inline" items="center" font="bold" h="full" m="t-2">
         Contact
       </a>
     </div>
