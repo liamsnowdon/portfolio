@@ -90,9 +90,7 @@ Any third-party libraries and packages used would have their styles placed here.
 
 All the above directories' content will be imported into one main file. It's important to use the right order when importing to make sure the abstracts can be accessed properly and any cascading styles behave as expected. The final Sass file may look like this:
 
-```scss
-/* app.scss */
-
+```scss [app.scss]
 // Abstract
 @import 'abstracts/variables';
 @import 'abstracts/functions';

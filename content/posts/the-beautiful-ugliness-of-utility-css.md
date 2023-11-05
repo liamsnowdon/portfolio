@@ -16,7 +16,7 @@ The role I landed at used Nuxt and TypeScript, with Tailwind CSS. I had never wo
 
 Sure, some basic utility classes can be seen as that, let's take a simple text-blue-500 class, one of the default colour classes from Tailwind, for example. All that will do is set the text colour to blue, but let's take a closer look at what is generated in the CSS.
 
-```css
+```css [tailwind.css]
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
@@ -27,7 +27,7 @@ Not only can this be combined with an opacity, such as `text-blue-500/50` to app
 
 And that's only the basic use of utility classes. They get really powerful when used with "variants". Variants allow you to style elements based on pseudo-classes, like :hover and :disabled, and media queries. For example, you can create a box that has different padding across breakpoints which changes colour on hover like this:
 
-```html
+```html [index.html]
 <div class="p-4 md:p-8 lg:p-12 bg-blue-200 hover:bg-blue-400"></div>
 ```
 
@@ -35,7 +35,7 @@ Variants makes it **super fast to build components**. You don't need to worry ab
 
 Naturally though, some elements will contain quite a long list of classes. A typical button component might look something like this:
 
-```html
+```html [index.html]
 <button class="inline-flex items-center justify-center space-x-2 h-10 px-5 text-base text-blue-100 bg-blue-600 hover:bg-blue-700 focus:ring-blue-600 transition-colors duration-150 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-60 disabled:pointer-events-none">
   Explore
 </button>
@@ -47,7 +47,7 @@ Yep, that's 20 classes on there. It's messy and **can be hard to find a particul
 
 Windi CSS, another Utility CSS framework, introduced a way of writing Utility CSS called "Attributify Mode". Where normally you would apply styles as a long list of (probably unordered/unorganised) list of classes, Attributify Mode allows you to style elements based on attributes. If we take the button component above, we can rewrite it with attributes like:
 
-```html
+```html [index.html]
 <button
   flex="inline"
   align="items-center"

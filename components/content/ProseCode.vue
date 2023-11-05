@@ -1,35 +1,65 @@
-<script>
-import { defineComponent } from '#imports'
+<script setup lang="ts">
+import { useClipboard } from '@vueuse/core'
 
-export default defineComponent({
-  props: {
-    code: {
-      type: String,
-      default: '',
-    },
-    language: {
-      type: String,
-      default: null,
-    },
-    filename: {
-      type: String,
-      default: null,
-    },
-    highlights: {
-      type: Array,
-      default: () => [],
-    },
-    meta: {
-      type: String,
-      default: null,
-    },
-  },
+const props = withDefaults(defineProps<{
+  code?: string
+  language?: string | null
+  filename?: string | null
+  highlights?: number[]
+  meta?: string | null
+}>(), {
+  code: '',
+  language: null,
+  filename: null,
+  highlights: () => [],
 })
+
+const { copied, copy, isSupported } = useClipboard()
+
+const languageIconsMap: Record<string, string> = {
+  scss: 'i-logos-sass',
+  css: 'i-logos-css-3',
+  html: 'i-logos-html-5',
+  twig: 'i-logos-html-5',
+  bash: 'i-logos-bash-icon',
+  js: 'i-logos-javascript',
+  json: 'i-logos-json',
+}
+
+function copyToClipboard () {
+  copy(props.code)
+}
 </script>
 
 <template>
-  <div bg="black/20" p="8" rounded="2xl" m="y-7">
-    <slot />
+  <div m="y-7" rounded="2xl" overflow="hidden">
+    <div v-if="filename || isSupported" flex="~" justify="between" p="4" bg="black/40">
+      <span flex="inline" items="center" space="x-2" text="sm white">
+        <span v-if="filename && language" :class="languageIconsMap[language]" text="xl" />
+        <span v-if="filename">{{ filename }}</span>
+      </span>
+
+      <div v-if="isSupported" flex="~" items="center" space="x-2">
+        <template v-if="copied">
+          <span text="sm indigo-500">
+            Copied
+          </span>
+          <span text="xl indigo-500" class="i-carbon-checkmark" />
+        </template>
+
+        <button
+          v-else
+          type="button"
+          text="xl neutral-400 hover:white"
+          class="i-carbon-copy"
+          @click="copyToClipboard"
+        />
+      </div>
+    </div>
+
+    <div bg="black/20" p="8">
+      <slot />
+    </div>
   </div>
 </template>
 

@@ -18,7 +18,7 @@ A good development workflow will automatically manage all your assets for you in
 
 Let's take a look at how we can create a basic Gulp workflow, but first we will need to install the gulp-cli globally so we can use the Gulp commands in the terminal.
 
-```bash
+```bash [Bash]
 npm install -g gulp-cli
 ```
 
@@ -28,13 +28,13 @@ Nice! We're now ready to start the project.
 
 First we need to initialise the project for packages, we will use NPM for this.
 
-```bash
+```bash [Bash]
 npm init
 ```
 
 This will take you through the process of setting up the project and allow you to install node packages. If you take a look inside the project, you will now see a file called `package.json`. This is where you will be saving all the development dependencies that Gulp will be using. We can now install Gulp locally.
 
-```bash
+```bash [Bash]
 npm install --save-dev gulp
 ```
 
@@ -44,9 +44,7 @@ If you look inside `package.json` again you will see Gulp as a development depen
 
 When we use the Gulp CLI, it will look for a file called `gulpfile.js` and then the tasks it exports. So, let's create this file in the same location as `package.json`. We can add a basic task just to see it working. You can copy the following into your gulpfile:
 
-```js
-// gulpfile.js
-
+```js [gulpfile.js]
 const gulp = require('gulp')
 
 function test () {
@@ -62,7 +60,7 @@ This is the basics of creating a gulp task and exporting it. Using the Gulp CLI,
 
 Let's install some more dependencies to deal with our assets:
 
-```bash
+```bash [Bash]
 npm install --save-dev gulp-sass gulp-postcss cssnano css-mqpacker autoprefixer gulp-concat gulp-uglify
 ```
 
@@ -78,9 +76,7 @@ There are several plugins here so let's quickly go over what they do:
 
 Go ahead and **require** these in the gulpfile like we did with `const gulp = require('gulp');`
 
-```js
-// gulpfile.js
-
+```js [gulpfile.js]
 const gulp = require('gulp')
 const sass = require('sass')
 const postcss = require('gulp-postcss')
@@ -95,9 +91,7 @@ const uglify = require('gulp-uglify')
 
 Let's create our first real task, which will process our CSS. You can delete the test function and export for it that we wrote earlier.
 
-```js
-// gulpfile.js
-
+```js [gulpfile.js]
 const postcssPlugins = [
   autoprefixer({ cascade: false }),
   mqPacker(),
@@ -127,9 +121,7 @@ This task can now be run with `gulp css`. Make sure you've got a `styles.scss` f
 
 That's the CSS done, now we need another task that does the JavaScript.
 
-```js
-// gulpfile.js
-
+```js [gulpfile.js]
 function createErrorHandler (name) {
   return function (err) {
     console.error(`Error from ${name} in task`, err.toString())
@@ -159,9 +151,7 @@ This task can now be run with `gulp js`.
 
 At the moment, every time we make a change to a CSS or JS file, we would need to re-run the command again in order for it to take effect. This is where watchers come in. It will watch for changes in any of these files, and re-run the commands automatically. This is done using the `gulp.watch` method.
 
-```js
-// gulpfile.js
-
+```js [gulpfile.js]
 function watch () {
   gulp.watch('./assets/scss/**/*.scss', css)
   gulp.watch('./assets/js/*.js', js)
@@ -181,7 +171,7 @@ Gulp 4 introduced two really cool methods that brings a new way of running tasks
 
 This is a good opportunity to create an additional task that runs all three of our tasks together. Remove the `exports.watch = watch;` from the gulpfile and add the following export instead:
 
-```js
+```js [gulpfile.js]
 exports.watch = gulp.series(gulp.parallel(css, js), watch)
 ```
 

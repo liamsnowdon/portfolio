@@ -22,7 +22,7 @@ Adding a `srcset` attribute to an `<img>` tag allows you to provide a list of di
 
 A **pixel density descriptor** refers to the pixel density of the device's display. With this it is possible to render a more detailed high-res version of the image for retina screens. It may look like this:
 
-```html
+```html [index.html]
 <img
   src="business-cards.jpg"
   srcset="
@@ -41,7 +41,7 @@ A **width descriptor** tells the browser the width of the image. If the image is
 
 The `sizes` attribute defines a list of media conditions along with the image from `srcset` to choose from. The browser will work its way through those media conditions until one is true and show the image paired with it. If none of the media conditions are true, it will use the default one.
 
-```html
+```html [index.html]
 <img
   src="business-cards-1024.jpg"
   srcset="
@@ -78,7 +78,7 @@ It's important to remember that using `<img src="" srcset="" sizes="">` is for s
 
 The `<picture>` element is meant exactly for this, and gives you way more control over what the browser does when rendering the images. Where using the previous method tells the browser to choose the most appropriate image to render based on the layout of the page as well as the viewport width, using the `<picture>` element will tell the browser exactly what image to render using a media condition.
 
-```html
+```html [index.html]
 <picture>
   <source 
     srcset="business-cards-1024.jpg"
@@ -96,7 +96,7 @@ This already looks a lot simpler to understand than using `<img src="" srcset=""
 
 You might have noticed it uses srcset like the **Image Srcset and Sizes** section previously. This means we can use similar features in our `<picture>` element for the `<source srcset="">`.
 
-```html
+```html [index.html]
 <picture>
   <source 
     srcset="

@@ -18,7 +18,7 @@ The W3 spec defines it as the following:
 
 The value of the media query is either **none** or **hover**. Let's take a look at how it works:
 
-```scss
+```scss [_button.scss]
 /* _buttons.scss */
 
 .button {
@@ -44,7 +44,7 @@ Browser support for `@media (hover: hover)` is pretty good nowadays.
 
 Although, there is one problem you may have which is IE if you need to support it. There's a workaround for it though, it just involves using a reset.
 
-```scss
+```scss [_button.scss]
 /* _buttons.scss */
 
 .button {
