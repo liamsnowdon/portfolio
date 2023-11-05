@@ -1,4 +1,7 @@
 <script setup lang="ts">
+useHead({
+  title: 'Posts - Liam Snowdon',
+})
 interface SelectOption {
   label: string
   value: string
