@@ -55,13 +55,13 @@ useHead({
       </NuxtLink>
 
       <ContentDoc>
-        <template #default="{ doc: post }">
+        <template #default="{ doc }">
           <article>
             <div m="b-8">
               <h1 text="4xl md:6xl white" font="bold" m="b-4">
-                {{ post.title }}
+                {{ doc.title }}
               </h1>
-              <p>{{ post.readingTime.text }} • Posted on {{ $dayjs(post.posted_at).format('MMM DD, YYYY') }}</p>
+              <p>{{ doc.readingTime.text }} • Posted on {{ $dayjs(doc.posted_at).format('MMM DD, YYYY') }}</p>
             </div>
             <ContentRenderer :value="post" />
           </article>
