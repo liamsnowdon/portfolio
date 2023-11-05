@@ -9,7 +9,7 @@ const props = defineProps<Props>()
 
 <template>
   <a
-    v-motion="{
+    v-motion="delay !== 0 ? {
       initial: {
         y: -100,
         opacity: 0,
@@ -21,7 +21,7 @@ const props = defineProps<Props>()
           delay: props.delay,
         },
       },
-    }"
+    } : {}"
     :href="url"
     target="_blank"
     bg="neutral-800 hover:neutral-700/50 focus:neutral-700/50"

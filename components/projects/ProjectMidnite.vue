@@ -1,6 +1,6 @@
 <template>
   <Project
-    :delay="200"
+    :delay="0"
     url="https://www.midnite.com"
     p="t-8 x-6 md:t-18 md:x-8"
   >
