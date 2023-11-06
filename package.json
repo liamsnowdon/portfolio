@@ -2,9 +2,9 @@
   "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "node sitemap.js && nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "node sitemap.js && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
