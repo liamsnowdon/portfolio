@@ -1,8 +1,10 @@
 <script setup lang="ts">
-const { data: post } = await useAsyncData('post', () => {
+const slug = useRoute().params.slug
+
+const { data: post } = await useAsyncData(`post-${slug}`, () => {
   return queryContent('posts')
     .where({
-      slug: useRoute().params.slug,
+      slug,
     })
     .findOne()
 })
@@ -63,7 +65,7 @@ useHead({
               </h1>
               <p>{{ doc.readingTime.text }} • Posted on {{ $dayjs(doc.posted_at).format('MMM DD, YYYY') }}</p>
             </div>
-            <ContentRenderer :value="post" />
+            <ContentRenderer :value="doc" />
           </article>
         </template>
 
