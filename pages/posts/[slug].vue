@@ -63,7 +63,11 @@ useHead({
               <h1 text="4xl md:6xl white" font="bold" m="b-4">
                 {{ doc.title }}
               </h1>
-              <p>{{ doc.readingTime.text }} • Posted on {{ $dayjs(doc.posted_at).format('MMM DD, YYYY') }}</p>
+              <p>
+                <template v-if="doc.readingTime">
+                  {{ doc.readingTime.text }} •
+                </template>Posted on {{ $dayjs(doc.posted_at).format('MMM DD, YYYY') }}
+              </p>
             </div>
             <ContentRenderer :value="doc" />
           </article>

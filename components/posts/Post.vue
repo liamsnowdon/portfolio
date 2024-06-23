@@ -27,7 +27,7 @@ defineProps<{
     </div>
 
     <div flex="~" justify="between" space="x-4">
-      <p text="sm">
+      <p v-if="post.readingTime" text="sm">
         {{ post.readingTime.text }}
       </p>
       <p text="sm">
