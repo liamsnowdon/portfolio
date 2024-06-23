@@ -1,5 +1,5 @@
 <template>
-  <Project :delay="500" url="https://widgeter.dev">
+  <Project :delay="600" url="https://widgeter.dev">
     <img
       src="/images/projects/widgeter/widgeter.png"
       alt="Widgeter Logo"
