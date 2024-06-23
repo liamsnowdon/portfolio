@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@vueuse/motion/nuxt',
     'dayjs-nuxt',
+    '@nuxthq/studio',
   ],
 
   components: [{
