@@ -66,7 +66,7 @@ const row3Items = [
       }"
       flex="~"
       justify="center"
-      space="x-4"
+      space="x-1 md:x-4"
     >
       <img
         v-for="item in row1Items"
@@ -95,7 +95,7 @@ const row3Items = [
       }"
       flex="~"
       justify="center"
-      space="x-4"
+      space="x-1 md:x-4"
     >
       <img
         v-for="item in row2Items"
@@ -124,8 +124,8 @@ const row3Items = [
       }"
       flex="~"
       justify="center"
-      space="x-4"
-      m="b-4"
+      space="x-1 md:x-4"
+      m="b-1 md:b-4"
     >
       <img
         v-for="item in row3Items"
