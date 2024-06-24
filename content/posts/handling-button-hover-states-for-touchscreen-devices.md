@@ -1,10 +1,7 @@
 ---
-id: 3
 posted_at: 2020-12-22T00:00:00.000Z
 slug: handling-button-hover-states-for-touchscreen-devices
 title: Handling button hover states for touchscreen devices
-category: css
-tags: ['responsive']
 intro: On mobile devices hover states tend to stick unlike desktop. The workaround is to use a special media query.
 ---
 

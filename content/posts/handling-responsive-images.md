@@ -1,10 +1,7 @@
 ---
-id: 2
 posted_at: 2020-12-15T00:00:00.000Z
 slug: handling-responsive-images
 title: Handling responsive images
-category: html
-tags: ['responsive']
 intro: Sometimes we want an image to look slightly different across devices or show a different image entirely.
 ---
 

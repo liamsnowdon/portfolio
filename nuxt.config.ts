@@ -20,6 +20,15 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: 'dracula-soft',
+      langs: [
+        'html',
+        'css',
+        'scss',
+        'js',
+        'twig',
+        'json',
+        'bash',
+      ],
     },
 
     markdown: {

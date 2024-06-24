@@ -3,7 +3,7 @@ const { data: posts } = await useAsyncData('latest_posts', () => {
   return queryContent('posts')
     .only(['title', 'posted_at', 'slug', 'intro', 'readingTime'])
     .limit(4)
-    .sort({ id: -1, $numeric: true })
+    .sort({ posted_at: -1 })
     .find()
 })
 </script>

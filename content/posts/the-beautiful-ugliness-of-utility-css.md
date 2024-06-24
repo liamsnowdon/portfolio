@@ -1,10 +1,7 @@
 ---
-id: 7
 posted_at: 2023-11-05T00:00:00.000Z
 slug: the-beautiful-ugliness-of-utility-css
 title: The Beautiful Ugliness of Utility CSS
-category: css
-tags: []
 intro: In 2021, I started looking for a new frontend role. When it came to CSS, my background was a standard Sass pre-processor setup for CSS for work and personal projects. My go-to would be the 7-1 architecture pattern.
 ---
 

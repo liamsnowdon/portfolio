@@ -1,10 +1,7 @@
 ---
-id: 6
 posted_at: 2021-01-24T00:00:00.000Z
 slug: using-the-7-1-pattern-for-better-sass-architecture
 title: Using the 7-1 pattern for better Sass architecture
-category: css
-tags: ['sass']
 intro: As with everything, keeping your Sass files organised is key for easy and efficient working. The 7-1 pattern can help with this.
 ---
 

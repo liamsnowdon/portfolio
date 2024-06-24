@@ -1,10 +1,7 @@
 ---
-id: 8
 posted_at: 2024-06-24T00:03:00.000Z
 slug: writing-achievement-guides-and-nonsense-with-nuxt-studio-and-the-steam-api
 title: Writing achievement guides and nonsense with Nuxt Studio and the Steam API
-category: javascript
-tags: []
 intro: A shiny new Nuxt module called Nuxt Studio, an editor for Nuxt Content websites, has officially released. I was lucky enough to get early access on the waiting list so I needed an excuse to make full use of it.
 ---
 

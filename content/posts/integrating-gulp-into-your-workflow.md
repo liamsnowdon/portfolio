@@ -1,10 +1,7 @@
 ---
-id: 1
 posted_at: 2020-12-08T00:00:00.000Z
 slug: integrating-gulp-into-your-workflow
 title: Integrating Gulp into your workflow
-category: javascript
-tags: ['workflow']
 intro: A task runner will make performing those repetitive tasks a lot more efficient and lets you worry about the actual development.
 ---
 
