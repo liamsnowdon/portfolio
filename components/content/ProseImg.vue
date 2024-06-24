@@ -1,28 +1,24 @@
-<template>
-  <img :src="refinedSrc" :alt="alt" :width="width" :height="height">
-</template>
-
 <script setup lang="ts">
 import { withBase } from 'ufo'
-import { useRuntimeConfig, computed } from '#imports'
+import { computed, useRuntimeConfig } from '#imports'
 
 const props = defineProps({
   src: {
     type: String,
-    default: ''
+    default: '',
   },
   alt: {
     type: String,
-    default: ''
+    default: '',
   },
   width: {
     type: [String, Number],
-    default: undefined
+    default: undefined,
   },
   height: {
     type: [String, Number],
-    default: undefined
-  }
+    default: undefined,
+  },
 })
 
 const refinedSrc = computed(() => {
@@ -32,3 +28,15 @@ const refinedSrc = computed(() => {
   return props.src
 })
 </script>
+
+<template>
+  <img
+    :src="refinedSrc"
+    :alt="alt"
+    :width="width"
+    :height="height"
+    loading="lazy"
+    border="~ neutral-800 rounded-2xl"
+    max-w="screen-md"
+  >
+</template>

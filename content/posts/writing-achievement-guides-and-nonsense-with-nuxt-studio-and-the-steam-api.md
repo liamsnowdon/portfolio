@@ -26,11 +26,9 @@ The partnered providers come with an excerpt of the articles in HTML and the Ste
 
 ![News modal for a Starfield post from VG247](/images/posts/mgg-modal.jpeg)
 
-I had a Steam API key, so I wanted to make the most of it. I started playing with the other endpoints Steam had to offer. While the API isn't amazing, I could get a decent amount of data such as basic game information, achievements, assets, player counts, my user profile and my recently played games. This allowed me to create scripts to automatically create game pages, with achievement sections and player counts. Here is the game page for THE FINALS.
+I had a Steam API key, so I wanted to make the most of it. I started playing with the other endpoints Steam had to offer. While the API isn't amazing, I could get a decent amount of data such as basic game information, achievements, assets, player counts, my user profile and my recently played games. This allowed me to create scripts to automatically create game pages, with news, achievements and player counts.
 
 ![The Finals game page](/images/posts/mgg-the-finals.jpeg)
-
-And here is Starfield, with a news feature block and an achievement feature block.
 
 ![Starfield game page with news and achievements feature blocks](/images/posts/mgg-starfield.jpeg)
 
