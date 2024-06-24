@@ -38,5 +38,6 @@ const refinedSrc = computed(() => {
     loading="lazy"
     border="~ neutral-800 rounded-2xl"
     max-w="screen-md"
+    w="full"
   >
 </template>
