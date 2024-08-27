@@ -5,7 +5,7 @@ type Size = 'small' | 'medium' | 'large'
 interface Props {
   variant?: Variant
   size?: Size
-  to?: 'string'
+  to?: string
   href?: string
   fullSize?: boolean
 }
@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
 const classes = computed(() => {
   return {
     'bg-indigo-500 hover:bg-indigo-400 ring-indigo-500 ring-offset-indigo-900  text-white': props.variant === 'primary',
-    'bg-white hover:bg-neutral-200 ring-white ring-offset-neutral-900 text-black': props.variant === 'secondary',
+    'bg-white hover:bg-neutral-100 ring-white ring-offset-neutral-900 text-black': props.variant === 'secondary',
     'py-2 px-4 text-sm': props.size === 'small',
     'py-3 px-5 text-base': props.size === 'medium',
     'py-4 px-6 text-lg': props.size === 'large',

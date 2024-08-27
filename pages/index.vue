@@ -9,6 +9,7 @@ useHead({
     <Hero />
     <Projects />
     <About />
+    <NeedAWebsite />
     <Tools />
     <Posts />
   </div>

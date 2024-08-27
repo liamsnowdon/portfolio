@@ -1,0 +1,16 @@
+{
+  "vue": {
+		"prefix": "vue",
+		"body": [
+      "<script setup lang=\"ts\">",
+      "$1",
+      "</script>",
+      "",
+			"<template>",
+			"  $2",
+			"</template>",
+			"",
+		],
+		"description": "Minimum boilerplate for a component"
+	},
+}
