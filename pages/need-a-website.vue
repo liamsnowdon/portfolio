@@ -10,6 +10,8 @@ definePageMeta({
 
 <template>
   <div>
-    Need a website mate?
+    <Hero />
+    <HowItWorks />
+    <WebsiteForm />
   </div>
 </template>
