@@ -14,12 +14,18 @@
             <p text="lg neutral-100" m="b-4">
               Got a new business and ready to get out there? <br> Or maybe you've been around a while and want to extend your reach?
             </p>
-            <NuxtLink to="/need-a-website" class="text-lg text-neutral-100 hover:text-white underline" m="b-4">
+            <p text="lg neutral-100" m="b-4">
               Let's build your website together!
-            </NuxtLink>
+            </p>
+
+            <div>
+              <Button href="#contact" variant="secondary" w="<md:full">
+                Get in touch
+              </Button>
+            </div>
           </div>
 
-          <img display="none lg:block" pos="absolute bottom--1 right-0" src="/images/memoji-phone.png" alt="Liam Snowdon Profile Picture" h="30 md:60" w="30 md:60">
+          <img display="none lg:block" pos="absolute bottom--2 right-0" src="/images/memoji-phone.png" alt="Liam Snowdon Profile Picture" h="74" w="74">
         </div>
       </div>
     </WrapperContent>
