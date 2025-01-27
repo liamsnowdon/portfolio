@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import Button from '../button/Button.vue'
 </script>
 
 <template>

@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import InputText from '../form/InputText.vue'
+import InputTextarea from '../form/InputTextarea.vue'
+import Button from '../button/Button.vue'
+
 const form = ref({
   name: '',
   email: '',

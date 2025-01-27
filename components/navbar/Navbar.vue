@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <nav flex="~" justify="between" p="4">
     <NuxtLink to="/" flex="~" items="center" space="x-2">

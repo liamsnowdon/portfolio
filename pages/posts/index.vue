@@ -1,6 +1,15 @@
 <script setup lang="ts">
-useHead({
+import { computed } from 'vue'
+import { useSeoMeta } from '@unhead/vue'
+import { useAsyncData, queryContent } from '#imports'
+import Wrapper from '~/components/wrapper/Wrapper.vue'
+import WrapperContent from '~/components/wrapper/WrapperContent.vue'
+import Post from '~/components/posts/Post.vue'
+
+useSeoMeta({
   title: 'Posts - Liam Snowdon',
+  ogTitle: 'Posts - Liam Snowdon',
+  twitterTitle: 'Posts - Liam Snowdon',
 })
 
 const { data } = await useAsyncData('posts', () => {

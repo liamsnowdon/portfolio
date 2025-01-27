@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import Button from '../button/Button.vue'
+import Post from './Post.vue'
+import { useAsyncData, queryContent } from '#imports'
+
 const { data: posts } = await useAsyncData('latest_posts', () => {
   return queryContent('posts')
     .only(['title', 'posted_at', 'slug', 'intro', 'readingTime'])

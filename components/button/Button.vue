@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed, resolveComponent } from 'vue'
+
 type Variant = 'primary' | 'secondary'
 type Size = 'small' | 'medium' | 'large'
 

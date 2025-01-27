@@ -1,7 +1,10 @@
 <script setup lang="ts">
-useHead({
-  title: 'Liam Snowdon - Frontend Engineer',
-})
+import Hero from '~/components/hero/Hero.vue'
+import Projects from '~/components/projects/Projects.vue'
+import About from '~/components/about/About.vue'
+import NeedAWebsite from '~/components/need-a-website/NeedAWebsite.vue'
+import Tools from '~/components/tools/Tools.vue'
+import Posts from '~/components/posts/Posts.vue'
 </script>
 
 <template>

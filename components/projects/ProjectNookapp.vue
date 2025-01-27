@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Project from './Project.vue'
+
 const row1Items = [
   { src: 'koi', name: 'Koi' },
   { src: 'butterfly-fish', name: 'Butterfly Fish' },

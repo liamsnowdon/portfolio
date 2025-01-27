@@ -9,10 +9,13 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
   ],
 
-  components: [{
-    path: '~/components',
-    pathPrefix: false,
-  }],
+  components: {
+    dirs: [],
+  },
+
+  imports: {
+    autoImport: false,
+  },
 
   css: [
     '@unocss/reset/tailwind.css',

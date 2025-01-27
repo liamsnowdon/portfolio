@@ -8,6 +8,11 @@ import 'swiper/css/a11y'
 import 'swiper/css/scrollbar'
 import 'swiper/css/mousewheel'
 
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import Tool from './Tool.vue'
+import { ClientOnly } from '#components'
+
 const items = [
   { name: 'Nuxt.js', url: 'https://nuxtjs.org', icon: 'i-logos-nuxt-icon' },
   { name: 'Vue.js', url: 'https://vuejs.org', icon: 'i-logos-vue' },

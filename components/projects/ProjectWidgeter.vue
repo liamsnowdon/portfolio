@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Project from './Project.vue'
+</script>
+
 <template>
   <Project :delay="600" url="https://widgeter.dev">
     <img

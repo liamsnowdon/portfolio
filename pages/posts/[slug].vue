@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { useSeoMeta } from '@unhead/vue'
+import { useRoute } from 'vue-router'
+import { useAsyncData, queryContent } from '#imports'
+import Wrapper from '~/components/wrapper/Wrapper.vue'
+import WrapperContent from '~/components/wrapper/WrapperContent.vue'
+import { ContentDoc, ContentRenderer } from '#components'
+
 const slug = useRoute().params.slug
 
 const { data: post } = await useAsyncData(`post-${slug}`, () => {
@@ -9,42 +16,14 @@ const { data: post } = await useAsyncData(`post-${slug}`, () => {
     .findOne()
 })
 
-useHead({
-  titleTemplate: '%s - Liam Snowdon',
-  meta: [
-    {
-      name: 'description',
-      content: post.value?.intro,
-    },
-    {
-      name: 'og:title',
-      content: `${post.value?.title} - Liam Snowdon`,
-    },
-    {
-      name: 'og:description',
-      content: post.value?.intro,
-    },
-    {
-      name: 'og:type',
-      content: 'article',
-    },
-    {
-      name: 'article:published_time',
-      content: post.value?.posted_at,
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary',
-    },
-    {
-      name: 'twitter:title',
-      content: `${post.value?.title} - Liam Snowdon`,
-    },
-    {
-      name: 'twitter:description',
-      content: post.value?.intro,
-    },
-  ],
+useSeoMeta({
+  title: `${post.value?.title} - Liam Snowdon`,
+  description: post.value?.intro,
+  ogType: 'article',
+  articlePublishedTime: post.value?.posted_at,
+  ogDescription: post.value?.intro,
+  twitterTitle: `${post.value?.title} - Liam Snowdon`,
+  twitterDescription: post.value?.intro,
 })
 </script>
 

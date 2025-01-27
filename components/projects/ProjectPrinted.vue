@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Project from './Project.vue'
+</script>
+
 <template>
   <Project :delay="500" url="https://www.printed.com">
     <div flex="~" items="center" space="x-4 lg:x-6">

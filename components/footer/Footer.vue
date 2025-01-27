@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import WrapperContent from '../wrapper/WrapperContent.vue'
+
 const year = new Date().getFullYear()
 
 const socials = [
