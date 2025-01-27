@@ -9,7 +9,7 @@
     >
 
     <div pos="relative">
-      <h2 text="3xl md:5xl white" font="bold" m="b-4">
+      <h2 text="3xl lg:5xl white" font="bold" m="b-4">
         Build Tailwind pages with <span text="blue-600">customizable widgets</span>
       </h2>
 

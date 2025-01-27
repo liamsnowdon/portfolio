@@ -25,14 +25,13 @@ const props = defineProps<Props>()
     :href="url"
     target="_blank"
     bg="neutral-800 hover:neutral-700/50 focus:neutral-700/50"
-    p="6 md:8"
-    rounded="3xl"
+    p="6 lg:8"
+    rounded="2xl lg:3xl"
     pos="relative"
     overflow="hidden"
     outline="none"
     ring="focus:2 neutral-800 offset-neutral-700 offset-2"
     flex="~ col"
-    items="center"
     justify="center"
   >
     <slot />
