@@ -47,7 +47,7 @@ import Project from './Project.vue'
               },
             },
           }"
-          src="/images/projects/midnite/mobile.png"
+          src="/images/projects/midnite/mobile-2.png"
           alt="Midnite Logo"
           w="80 lg:100"
           rounded="3xl"
