@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper'
+import { A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
@@ -7,6 +7,11 @@ import 'swiper/css/pagination'
 import 'swiper/css/a11y'
 import 'swiper/css/scrollbar'
 import 'swiper/css/mousewheel'
+
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import Tool from './Tool.vue'
+import { ClientOnly } from '#components'
 
 const items = [
   { name: 'Nuxt.js', url: 'https://nuxtjs.org', icon: 'i-logos-nuxt-icon' },

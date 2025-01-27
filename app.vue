@@ -1,7 +1,33 @@
 <script setup lang="ts">
+import { useSeoMeta, useHead } from '@unhead/vue'
 import { getExperience } from '~~/utils'
 
 const experience = getExperience()
+
+useSeoMeta({
+  title: 'Liam Snowdon - Frontend Engineer',
+  description: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
+  ogTitle: 'Liam Snowdon - Frontend Engineer',
+  ogDescription: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
+  ogType: 'website',
+  ogImage: {
+    url: 'https://liamsnowdon.uk/portfolio-meta-1200.png',
+    width: 1200,
+    height: 600,
+    alt: 'Liam Snowdon - Frontend Engineer',
+  },
+  twitterCard: 'summary',
+  twitterTitle: 'Liam Snowdon - Frontend Engineer',
+  twitterDescription: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
+  twitterImage: {
+    url: 'https://liamsnowdon.uk/portfolio-meta-1200.png',
+    width: 1200,
+    height: 600,
+    alt: 'Liam Snowdon - Frontend Engineer',
+  },
+  msapplicationTileColor: '#171717',
+  themeColor: '#171717',
+})
 
 useHead({
   link: [
@@ -13,56 +39,6 @@ useHead({
   htmlAttrs: {
     lang: 'en',
   },
-  meta: [
-    {
-      name: 'description',
-      content: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
-    },
-    {
-      name: 'og:title',
-      content: 'Liam Snowdon - Frontend Engineer',
-    },
-    {
-      name: 'og:description',
-      content: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
-    },
-    {
-      name: 'og:type',
-      content: 'website',
-    },
-    {
-      name: 'og:image',
-      content: 'https://liamsnowdon.uk/portfolio-meta-1200.png',
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary',
-    },
-    {
-      name: 'twitter:title',
-      content: 'Liam Snowdon - Frontend Engineer',
-    },
-    {
-      name: 'twitter:description',
-      content: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
-    },
-    {
-      name: 'twitter:image',
-      content: 'https://liamsnowdon.uk/portfolio-meta-1200.png',
-    },
-    {
-      name: 'twitter:image:alt',
-      content: 'Liam Snowdon - Frontend Engineer',
-    },
-    {
-      name: 'msapplication-TileColor',
-      content: '#171717',
-    },
-    {
-      name: 'theme-color',
-      content: '#171717',
-    },
-  ],
 })
 </script>
 

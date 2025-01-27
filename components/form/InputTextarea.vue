@@ -8,12 +8,24 @@ interface Props {
 
 defineProps<Props>()
 
-defineEmits(['update:modelValue'])
+const emit = defineEmits<{
+  'update:modelValue': [string]
+}>()
+
+function onInput (event: Event) {
+  emit('update:modelValue', (event.target as HTMLSelectElement).value)
+}
 </script>
 
 <template>
   <div flex="~ col" space="y-2">
-    <label v-if="$slots.label" :for="id" text="white sm" font="medium" display="block">
+    <label
+      v-if="$slots.label"
+      :for="id"
+      text="white sm"
+      font="medium"
+      display="block"
+    >
       <slot name="label" />
     </label>
 
@@ -29,7 +41,7 @@ defineEmits(['update:modelValue'])
       :placeholder="placeholder"
       :required="required"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="onInput"
     />
 
     <slot name="helper" />

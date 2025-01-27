@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import Project from './Project.vue'
+</script>
+
 <template>
   <Project
     :delay="400"
@@ -5,7 +9,7 @@
     border="3 yellow-400"
   >
     <div>
-      <h2 text="3xl md:5xl white" font="bold" m="b-4">
+      <h2 text="3xl lg:5xl white" font="bold" m="b-4">
         <span text="yellow-400">Bolt</span> - a bingo generator
       </h2>
 

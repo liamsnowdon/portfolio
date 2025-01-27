@@ -14,7 +14,7 @@ export default defineConfig({
 
   theme: {
     colors: {
-      midnite: '#b3ff66',
+      midnite: '#48f359',
     },
   },
 
@@ -24,7 +24,7 @@ export default defineConfig({
   },
 
   preflights: [{
-    getCSS: ({ theme }) => `
+    getCSS: ({ theme }: { theme: any }) => `
       html, body {
         height: 100%;
       }

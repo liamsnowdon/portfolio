@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import fs from 'node:fs'
 import { defineNuxtModule } from '@nuxt/kit'
 
@@ -19,8 +18,8 @@ export default defineNuxtModule(() => {
     baseRoutes.forEach((route) => {
       xml.push(
         '<url>',
-      `<loc>${baseUrl}${route}</loc>`,
-      '</url>',
+        `<loc>${baseUrl}${route}</loc>`,
+        '</url>',
       )
     })
 
@@ -28,8 +27,8 @@ export default defineNuxtModule(() => {
       const [route] = post.split('.')
       xml.push(
         '<url>',
-      `<loc>${baseUrl}/posts/${route}</loc>`,
-      '</url>',
+        `<loc>${baseUrl}/posts/${route}</loc>`,
+        '</url>',
       )
     })
 

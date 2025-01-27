@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Project from './Project.vue'
+
 const row1Items = [
   { src: 'koi', name: 'Koi' },
   { src: 'butterfly-fish', name: 'Butterfly Fish' },
@@ -47,7 +49,7 @@ const row3Items = [
   <Project
     :delay="500"
     url="https://thenookapp.com"
-    p="b-6 x-6 md:b-8 md:x-8"
+    p="b-6 x-6 lg:b-8 lg:x-8"
   >
     <div
       v-motion="{
@@ -66,7 +68,7 @@ const row3Items = [
       }"
       flex="~"
       justify="center"
-      space="x-1 md:x-4"
+      space="x-1 lg:x-4"
     >
       <img
         v-for="item in row1Items"
@@ -95,7 +97,7 @@ const row3Items = [
       }"
       flex="~"
       justify="center"
-      space="x-1 md:x-4"
+      space="x-1 lg:x-4"
     >
       <img
         v-for="item in row2Items"
@@ -124,8 +126,8 @@ const row3Items = [
       }"
       flex="~"
       justify="center"
-      space="x-1 md:x-4"
-      m="b-1 md:b-4"
+      space="x-1 lg:x-4"
+      m="b-1 lg:b-4"
     >
       <img
         v-for="item in row3Items"
@@ -138,7 +140,7 @@ const row3Items = [
     </div>
 
     <div text="center">
-      <h2 text="3xl md:5xl white" font="bold" m="b-4">
+      <h2 text="3xl lg:5xl white" font="bold" m="b-4">
         NookApp - an Animal Crossing hub
       </h2>
 

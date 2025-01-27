@@ -2,15 +2,27 @@
 defineProps<{
   modelValue: string
   id: string
-  options: { label: string; value: string }[]
+  options: { label: string, value: string }[]
 }>()
 
-defineEmits(['update:modelValue'])
+const emit = defineEmits<{
+  'update:modelValue': [string]
+}>()
+
+function onInput (event: Event) {
+  emit('update:modelValue', (event.target as HTMLSelectElement).value)
+}
 </script>
 
 <template>
   <div flex="~ col" space="y-2">
-    <label v-if="$slots.label" :for="id" text="white sm" font="medium" display="block">
+    <label
+      v-if="$slots.label"
+      :for="id"
+      text="white sm"
+      font="medium"
+      display="block"
+    >
       <slot name="label" />
     </label>
 
@@ -26,7 +38,7 @@ defineEmits(['update:modelValue'])
         text="base white"
         outline="none"
         appearance="none"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="onInput"
       >
         <option
           v-for="option in options"

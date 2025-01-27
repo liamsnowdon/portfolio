@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import Button from '../button/Button.vue'
 </script>
 
 <template>
@@ -25,7 +27,14 @@
             </div>
           </div>
 
-          <img display="none lg:block" pos="absolute bottom--2 right-0" src="/images/memoji-phone.png" alt="Liam Snowdon Profile Picture" h="74" w="74">
+          <img
+            class="hidden lg:block"
+            pos="absolute bottom--2 right-0"
+            src="/images/memoji-phone.png"
+            alt="Liam Snowdon Profile Picture"
+            h="74"
+            w="74"
+          >
         </div>
       </div>
     </WrapperContent>

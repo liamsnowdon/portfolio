@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Button from '../button/Button.vue'
 import { getExperience } from '~~/utils'
 
 const experience = getExperience()
@@ -22,7 +23,10 @@ const experience = getExperience()
           opacity: 1,
         },
       }"
-      bg="black/20" overflow="hidden" m="b-4" border="~ indigo-500 rounded-full"
+      bg="black/20"
+      overflow="hidden"
+      m="b-4"
+      border="~ indigo-500 rounded-full"
     >
       <img src="/images/memoji.png" alt="Liam Snowdon Profile Picture" h="30 md:60" w="30 md:60">
     </div>
@@ -41,7 +45,9 @@ const experience = getExperience()
           },
         },
       }"
-      text="4xl md:6xl white" font="bold" m="b-2"
+      text="4xl md:6xl white"
+      font="bold"
+      m="b-2"
     >
       Liam Snowdon
     </h1>
@@ -60,7 +66,9 @@ const experience = getExperience()
           },
         },
       }"
-      text="xl md:3xl white" font="semibold" m="b-4 md:b-8"
+      text="xl md:3xl white"
+      font="semibold"
+      m="b-4 md:b-8"
     >
       Frontend Engineer
     </h2>
@@ -79,7 +87,9 @@ const experience = getExperience()
           },
         },
       }"
-      text="lg md:2xl indigo-500" font="semibold" m="b-8"
+      text="lg md:2xl indigo-500"
+      font="semibold"
+      m="b-8"
     >
       {{ experience }} years of experience building cool stuff
     </p>

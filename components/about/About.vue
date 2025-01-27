@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
 import { getExperience } from '~~/utils'
 
 const experience = getExperience()
@@ -13,15 +15,17 @@ const experience = getExperience()
         </h2>
 
         <p text="lg neutral-400">
-          I'm a frontend engineer with over {{ experience }} years of commercial experience in web development. My journey started with AngularJS and jQuery, but I quickly fell in love with the simplicity and ease of use of Vue.js.
+          I'm a frontend engineer with over {{ experience }} years of commercial experience in web development. My journey started with AngularJS and jQuery, but I quickly fell in love with the simplicity and ease of use of Vue.js and Nuxt.js.
         </p>
 
         <p text="lg neutral-400">
-          Over the years, I have worked on a wide variety of projects, ranging from small static websites to large-scale enterprise applications. I have a keen eye for detail and am passionate about delivering high-quality and pixel-perfect designs.
+          I've worked on a wide variety of projects, ranging from small static websites to large-scale enterprise applications. I have a keen eye for detail and am passionate about delivering high-quality and pixel-perfect designs.
         </p>
 
         <p text="lg neutral-400">
-          When I'm not building cool stuff, I enjoy video games... like a LOT. Considering the amount of time I've sunk into Overwatch I should be way better at the game, but I'm still having fun so who's the real winner here? 😉
+          When I'm not building cool stuff, I'm an avid video game achievement hunter. I love collecting all achievements and 100%-ing as many games as I can. You can check out my <NuxtLink to="https://steamcommunity.com/id/moonlight_strike" target="_blank" class="text-indigo-500 hover:text-indigo-400">
+            Steam Profile
+          </NuxtLink> here 🎮
         </p>
       </div>
     </WrapperContent>

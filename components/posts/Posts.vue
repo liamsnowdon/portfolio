@@ -1,10 +1,17 @@
 <script setup lang="ts">
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import Button from '../button/Button.vue'
+import PostGrid from './PostGrid.vue'
+import { useAsyncData, queryContent } from '#imports'
+import type { PostTileEntity } from '~/types'
+
 const { data: posts } = await useAsyncData('latest_posts', () => {
-  return queryContent('posts')
+  return queryContent<PostTileEntity>('posts')
     .only(['title', 'posted_at', 'slug', 'intro', 'readingTime'])
     .limit(4)
     .sort({ posted_at: -1 })
-    .find()
+    .find() as Promise<PostTileEntity[]>
 })
 </script>
 
@@ -17,9 +24,7 @@ const { data: posts } = await useAsyncData('latest_posts', () => {
         </h2>
       </div>
 
-      <div grid="~ cols-1 md:cols-2 gap-4 md:gap-8" m="b-4 md:b-8">
-        <Post v-for="post in posts" :key="post.name" :post="post" />
-      </div>
+      <PostGrid v-if="posts" :posts="posts" m="b-4 md:b-8" />
 
       <div flex="~" justify="center">
         <Button to="/posts">

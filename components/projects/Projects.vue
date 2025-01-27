@@ -1,20 +1,25 @@
 <script setup lang="ts">
-
+import Wrapper from '../wrapper/Wrapper.vue'
+import WrapperContent from '../wrapper/WrapperContent.vue'
+import ProjectMidnite from './ProjectMidnite.vue'
+import ProjectMoonsGameGuides from './ProjectMoonsGameGuides.vue'
+import ProjectScreenshottedit from './ProjectScreenshottedit.vue'
+import ProjectPrinted from './ProjectPrinted.vue'
+import ProjectWidgeter from './ProjectWidgeter.vue'
 </script>
 
 <template>
   <Wrapper id="projects">
-    <WrapperContent space="y-4 md:y-8">
+    <WrapperContent space="y-4 lg:y-8">
       <ProjectMidnite />
 
-      <div grid="~ cols-1 md:cols-2 md:rows-2 gap-4 md:gap-8">
-        <ProjectMoonsGameGuides grid="md:row-span-2" />
+      <div grid="~ cols-1 lg:cols-2 gap-4 lg:gap-8">
+        <ProjectMoonsGameGuides />
+        <ProjectScreenshottedit />
 
         <ProjectPrinted />
         <ProjectWidgeter />
       </div>
-
-      <ProjectNookapp grid="col-span-12" />
     </WrapperContent>
   </Wrapper>
 </template>
