@@ -12,7 +12,7 @@ const socials = [
 <template>
   <footer p="y-8 x-4 md:y-12 md:x-8">
     <WrapperContent flex="~" items="center" justify="between">
-      <span text="white sm">&copy; {{ year }} Liam Snowdon</span>
+      <span text="white sm">&copy; 2021 - {{ year }} Liam Snowdon</span>
 
       <div flex="~" space="x-4">
         <a
