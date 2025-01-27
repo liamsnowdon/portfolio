@@ -4,7 +4,6 @@ import { useSeoMeta } from '@unhead/vue'
 import { useAsyncData, queryContent } from '#imports'
 import Wrapper from '~/components/wrapper/Wrapper.vue'
 import WrapperContent from '~/components/wrapper/WrapperContent.vue'
-import Post from '~/components/posts/Post.vue'
 import PostGrid from '~/components/posts/PostGrid.vue'
 import type { PostTileEntity } from '~/types'
 
