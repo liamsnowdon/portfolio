@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper'
+import { A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/autoplay'
