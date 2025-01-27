@@ -1,0 +1,26 @@
+name: Create Release PR
+on:
+  # On PR merge
+  pull_request:
+    branches-ignore:
+      - master
+    types: [closed]
+
+jobs:
+  create_pull_request:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    name: Create Pull Request
+    if: github.event.pull_request.merged
+
+    steps:
+      - uses: actions/github-script@v6
+        with:
+          script: |
+            return github.rest.pulls.create({
+              title: `[RELEASE] Develop -> Master`,
+              owner: "liamsnowdon",
+              repo: "portfolio",
+              head: "develop",
+              base: "master"
+            }).catch((e) => {console.error(e); return Promise.resolve(true);})
