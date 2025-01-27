@@ -3,11 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "prepare": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix --max-warnings 0"
@@ -27,6 +28,7 @@
     "eslint": "^8.46.0",
     "nuxt": "^3.15.3",
     "remark-reading-time": "^2.0.1",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.8"
   }
 }

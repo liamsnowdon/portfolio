@@ -11,7 +11,13 @@ withDefaults(defineProps<Props>(), {
   type: 'text',
 })
 
-defineEmits(['update:modelValue'])
+const emit = defineEmits<{
+  'update:modelValue': [string]
+}>()
+
+function onInput (event: Event) {
+  emit('update:modelValue', (event.target as HTMLInputElement).value)
+}
 </script>
 
 <template>
@@ -39,7 +45,7 @@ defineEmits(['update:modelValue'])
       :placeholder="placeholder"
       :required="required"
       :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="onInput"
     >
 
     <slot name="helper" />

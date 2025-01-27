@@ -24,7 +24,7 @@ export default defineConfig({
   },
 
   preflights: [{
-    getCSS: ({ theme }) => `
+    getCSS: ({ theme }: { theme: any }) => `
       html, body {
         height: 100%;
       }

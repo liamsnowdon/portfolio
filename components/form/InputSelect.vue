@@ -5,7 +5,13 @@ defineProps<{
   options: { label: string, value: string }[]
 }>()
 
-defineEmits(['update:modelValue'])
+const emit = defineEmits<{
+  'update:modelValue': [string]
+}>()
+
+function onInput (event: Event) {
+  emit('update:modelValue', (event.target as HTMLSelectElement).value)
+}
 </script>
 
 <template>
@@ -32,7 +38,7 @@ defineEmits(['update:modelValue'])
         text="base white"
         outline="none"
         appearance="none"
-        @input="$emit('update:modelValue', $event.target.value)"
+        @input="onInput"
       >
         <option
           v-for="option in options"

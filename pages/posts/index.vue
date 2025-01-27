@@ -5,6 +5,7 @@ import { useAsyncData, queryContent } from '#imports'
 import Wrapper from '~/components/wrapper/Wrapper.vue'
 import WrapperContent from '~/components/wrapper/WrapperContent.vue'
 import Post from '~/components/posts/Post.vue'
+import type { PostTileEntity } from '~/types'
 
 useSeoMeta({
   title: 'Posts - Liam Snowdon',
@@ -13,10 +14,10 @@ useSeoMeta({
 })
 
 const { data } = await useAsyncData('posts', () => {
-  return queryContent('posts')
-    .only(['title', 'posted_at', 'slug', 'intro', 'readingTime', 'category', 'tags'])
+  return queryContent<PostTileEntity>('posts')
+    .only(['title', 'posted_at', 'slug', 'intro', 'readingTime'])
     .sort({ posted_at: -1 })
-    .find()
+    .find() as Promise<PostTileEntity[]>
 })
 
 const posts = computed(() => {
