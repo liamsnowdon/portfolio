@@ -23,6 +23,7 @@ const languageIconsMap: Record<string, string> = {
   twig: 'i-logos-html-5',
   bash: 'i-logos-bash-icon',
   js: 'i-logos-javascript',
+  ts: 'i-logos-typescript-icon',
   json: 'i-logos-json',
 }
 

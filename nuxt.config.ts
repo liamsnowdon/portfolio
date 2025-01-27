@@ -17,6 +17,8 @@ export default defineNuxtConfig({
     autoImport: false,
   },
 
+  devtools: { enabled: true },
+
   css: [
     '@unocss/reset/tailwind.css',
   ],
@@ -29,6 +31,7 @@ export default defineNuxtConfig({
         'css',
         'scss',
         'js',
+        'ts',
         'twig',
         'json',
         'bash',

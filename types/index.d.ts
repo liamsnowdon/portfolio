@@ -15,7 +15,6 @@ export interface PostTileEntity extends MarkdownParsedContent {
 
 export interface PostEntity extends MarkdownParsedContent {
   title: string
-  description: string
   slug: string
   posted_at: string
   intro: string
