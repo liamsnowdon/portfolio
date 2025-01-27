@@ -31,7 +31,9 @@ const props = defineProps<Props>()
     overflow="hidden"
     outline="none"
     ring="focus:2 neutral-800 offset-neutral-700 offset-2"
-    display="block"
+    flex="~ col"
+    items="center"
+    justify="center"
   >
     <slot />
   </a>

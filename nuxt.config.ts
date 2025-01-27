@@ -35,4 +35,6 @@ export default defineNuxtConfig({
       remarkPlugins: ['remark-reading-time'],
     },
   },
+
+  compatibilityDate: '2025-01-27',
 })
