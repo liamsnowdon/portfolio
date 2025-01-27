@@ -25,7 +25,14 @@
             </div>
           </div>
 
-          <img class="hidden lg:block" pos="absolute bottom--2 right-0" src="/images/memoji-phone.png" alt="Liam Snowdon Profile Picture" h="74" w="74">
+          <img
+            class="hidden lg:block"
+            pos="absolute bottom--2 right-0"
+            src="/images/memoji-phone.png"
+            alt="Liam Snowdon Profile Picture"
+            h="74"
+            w="74"
+          >
         </div>
       </div>
     </WrapperContent>

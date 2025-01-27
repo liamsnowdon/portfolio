@@ -13,7 +13,13 @@ defineEmits(['update:modelValue'])
 
 <template>
   <div flex="~ col" space="y-2">
-    <label v-if="$slots.label" :for="id" text="white sm" font="medium" display="block">
+    <label
+      v-if="$slots.label"
+      :for="id"
+      text="white sm"
+      font="medium"
+      display="block"
+    >
       <slot name="label" />
     </label>
 

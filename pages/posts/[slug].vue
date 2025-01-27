@@ -51,7 +51,14 @@ useHead({
 <template>
   <Wrapper>
     <WrapperContent>
-      <NuxtLink to="/posts" class="text-indigo-500 hover:text-indigo-400" flex="inline" items="center" space="x-2" m="b-8">
+      <NuxtLink
+        to="/posts"
+        class="text-indigo-500 hover:text-indigo-400"
+        flex="inline"
+        items="center"
+        space="x-2"
+        m="b-8"
+      >
         <span class="i-carbon-arrow-left" />
         <span>Back to posts</span>
       </NuxtLink>

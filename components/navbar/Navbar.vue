@@ -10,7 +10,15 @@
     </NuxtLink>
 
     <div flex="~" justify="end" space="x-4">
-      <a :href="$route.path === '/' ? '#need-a-website' : '#contact'" class="text-indigo-500 hover:text-indigo-400" flex="inline" items="center" font="bold" h="full" m="t-2">
+      <a
+        :href="$route.path === '/' ? '#need-a-website' : '#contact'"
+        class="text-indigo-500 hover:text-indigo-400"
+        flex="inline"
+        items="center"
+        font="bold"
+        h="full"
+        m="t-2"
+      >
         Need a website?
       </a>
     </div>

@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
+    '@nuxt/eslint',
     '@nuxt/content',
     '@unocss/nuxt',
     '@vueuse/motion/nuxt',
@@ -37,4 +38,10 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-27',
+
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })

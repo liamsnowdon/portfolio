@@ -33,7 +33,13 @@ function copyToClipboard () {
 
 <template>
   <div m="y-7" rounded="2xl" overflow="hidden">
-    <div v-if="filename || isSupported" flex="~" justify="between" p="4" bg="black/40">
+    <div
+      v-if="filename || isSupported"
+      flex="~"
+      justify="between"
+      p="4"
+      bg="black/40"
+    >
       <span flex="inline" items="center" space="x-2" text="sm white">
         <span v-if="filename && language" :class="languageIconsMap[language]" text="xl" />
         <span v-if="filename">{{ filename }}</span>

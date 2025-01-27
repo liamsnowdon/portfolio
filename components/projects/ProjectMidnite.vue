@@ -17,7 +17,8 @@
       flex="~ col"
       items="center"
       justify="center"
-      text="center" pos="relative"
+      text="center"
+      pos="relative"
     >
       <h2 text="3xl lg:5xl white" font="bold" m="b-4">
         Re-imagining esports and sports betting

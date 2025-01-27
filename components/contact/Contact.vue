@@ -62,7 +62,13 @@ const socials = [
           </template>
         </InputText>
 
-        <InputText id="email" v-model="form.email" type="email" placeholder="Your email to reply to" required>
+        <InputText
+          id="email"
+          v-model="form.email"
+          type="email"
+          placeholder="Your email to reply to"
+          required
+        >
           <template #label>
             Email
           </template>

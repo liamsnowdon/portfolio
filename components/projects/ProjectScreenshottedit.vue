@@ -6,7 +6,14 @@
     p="x-6 lg:x-8"
   >
     <div pos="absolute inset-0">
-      <img src="/images/projects/screenshottedit/screenshottedit.webp" alt="" object="cover" h="full" w="full" op="50">
+      <img
+        src="/images/projects/screenshottedit/screenshottedit.webp"
+        alt=""
+        object="cover"
+        h="full"
+        w="full"
+        op="50"
+      >
     </div>
 
     <div pos="relative" text="center" p="y-12 x-6 lg:x-8">
