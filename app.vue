@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useSeoMeta, useHead } from '@unhead/vue'
-import { getExperience } from '~~/utils'
+import { getExperience } from '~/utils'
 
 const experience = getExperience()
 

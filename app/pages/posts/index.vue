@@ -31,7 +31,7 @@ const groupedPosts = computed(() => {
         posts: [item],
       })
     } else {
-      acc[existingGroupIndex].posts.push(item)
+      acc[existingGroupIndex]!.posts.push(item)
     }
 
     return acc

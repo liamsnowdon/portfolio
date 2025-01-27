@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PostTileEntity } from '~~/types'
+import type { PostTileEntity } from '~/types'
 
 defineProps<{
   post: PostTileEntity

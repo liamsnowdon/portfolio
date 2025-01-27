@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Button from '../button/Button.vue'
-import { getExperience } from '~~/utils'
+import { getExperience } from '~/utils'
 
 const experience = getExperience()
 </script>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Wrapper from '../wrapper/Wrapper.vue'
 import WrapperContent from '../wrapper/WrapperContent.vue'
-import { getExperience } from '~~/utils'
+import { getExperience } from '~/utils'
 
 const experience = getExperience()
 </script>
