@@ -36,6 +36,8 @@ export default defineNuxtConfig({
         'twig',
         'json',
         'bash',
+        'vue',
+        'toml',
       ],
     },
 

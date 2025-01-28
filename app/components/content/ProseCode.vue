@@ -25,6 +25,8 @@ const languageIconsMap: Record<string, string> = {
   js: 'i-logos-javascript',
   ts: 'i-logos-typescript-icon',
   json: 'i-logos-json',
+  vue: 'i-logos-vue',
+  toml: 'i-logos-netlify-icon',
 }
 
 function copyToClipboard () {
