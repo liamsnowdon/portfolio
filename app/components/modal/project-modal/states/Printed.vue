@@ -16,6 +16,6 @@ import Project from './Project.vue'
       'Twig',
     ]"
   >
-    With a wide range of products, Printed.com is the largest and fastest growing online print shop in the UK.
+    With a wide range of products, Printed.com is the largest and fastest growing online print shop in the UK. I created a lot of the widgets for the custom built AngularJS CMS that powered a lot of the shop website's product, collection, category and editorial pages.
   </Project>
 </template>

@@ -2,10 +2,10 @@
 posted_at: 2025-01-27T23:00:00.000Z
 slug: caching-nitro-endpoints-in-nuxt
 title: Caching Nitro endpoints in Nuxt
-intro: There is a caching mechanism built into Nitro, the server engine of Nuxt, that might be a little less known because its documentation is not currently in the Nuxt docs, they are only in the Nitro docs.
+intro: There is a caching mechanism built into Nitro, the server engine of Nuxt, that might be a little less known because it's documentation is not currently in the Nuxt docs, they are only in the Nitro docs.
 ---
 
-There is a caching mechanism built into Nitro, the server engine of Nuxt, that might be a little less known because its documentation is not currently in the Nuxt docs, it's only in the Nitro docs. Caching Nuxt/Nitro event handlers is a great way to improve performance and speed on endpoints by storing the response of incoming requests in JSON files so that the same requests can be served a lot faster. This might typically be used on endpoints where the data doesn't change much or where an endpoint is slow due to a lot of computing so caching will speed it up if available.
+There is a caching mechanism built into Nitro, the server engine of Nuxt, that might be a little less known because it's documentation is not currently in the Nuxt docs, it's only in the Nitro docs. Caching Nuxt/Nitro event handlers is a great way to improve performance and speed on endpoints by storing the response of incoming requests in JSON files so that the same requests can be served a lot faster. This might typically be used on endpoints where the data doesn't change much or where an endpoint is slow due to a lot of computing so caching will speed it up if available.
 
 It's super easy to do as well by replacing `defineEventHandler` on an endpoint with `defineCachedEventHandler`. It takes an additional parameter which defines the options for the handler. It has many options, but the main one that you need is `maxAge` which sets the maximum time that cache is valid, in seconds. If you have disabled auto-imports like me, you can import it from `nitropack/runtime`.
 
