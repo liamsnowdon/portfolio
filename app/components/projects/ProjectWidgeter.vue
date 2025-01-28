@@ -8,7 +8,7 @@ const modalStore = useModalStore()
 <template>
   <Project :delay="600" url="https://widgeter.dev" @click="modalStore.openModal('ProjectModal', { project: 'widgeter' })">
     <img
-      src="/images/projects/widgeter/widgeter.png"
+      src="/images/projects/widgeter/icon.png"
       alt="Widgeter Logo"
       pos="absolute bottom--25 right--25"
       h="75"

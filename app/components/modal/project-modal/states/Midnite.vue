@@ -4,8 +4,9 @@ import Project from './Project.vue'
 
 <template>
   <Project
-    title="Re-imagining esports and sports betting"
-    intro="Midnite is building a world-class esports, sports and game wagering platform for the new generation of fans."
+    project="midnite"
+    title="Midnite"
+    intro="Re-imagining esports and sports betting"
     url="https://midnite.com"
     :skills="[
       'Vue.js',
@@ -16,6 +17,6 @@ import Project from './Project.vue'
       'Cypress',
     ]"
   >
-    Content.
+    Midnite is building a world-class esports, sports and game wagering platform for the new generation of fans.
   </Project>
 </template>

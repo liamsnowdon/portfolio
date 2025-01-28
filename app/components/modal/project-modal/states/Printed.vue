@@ -4,8 +4,9 @@ import Project from './Project.vue'
 
 <template>
   <Project
-    title="The Printed Promise"
-    intro="With a wide range of products, Printed.com is the largest and fastest growing online print shop in the UK."
+    project="printed"
+    title="printed.com"
+    intro="High Quality Digital & Litho Printing"
     url="https://printed.com"
     :skills="[
       'Vue.js',
@@ -15,6 +16,6 @@ import Project from './Project.vue'
       'Twig',
     ]"
   >
-    Content.
+    With a wide range of products, Printed.com is the largest and fastest growing online print shop in the UK.
   </Project>
 </template>
