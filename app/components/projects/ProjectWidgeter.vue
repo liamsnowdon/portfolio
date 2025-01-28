@@ -1,11 +1,14 @@
 <script setup lang="ts">
 import Project from './Project.vue'
+import { useModalStore } from '~/stores/modal'
+
+const modalStore = useModalStore()
 </script>
 
 <template>
-  <Project :delay="600" url="https://widgeter.dev">
+  <Project :delay="600" url="https://widgeter.dev" @click="modalStore.openModal('ProjectModal', { project: 'widgeter' })">
     <img
-      src="/images/projects/widgeter/widgeter.png"
+      src="/images/projects/widgeter/icon.png"
       alt="Widgeter Logo"
       pos="absolute bottom--25 right--25"
       h="75"

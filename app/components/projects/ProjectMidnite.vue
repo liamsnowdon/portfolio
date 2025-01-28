@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Project from './Project.vue'
+import { useModalStore } from '~/stores/modal'
+
+const modalStore = useModalStore()
 </script>
 
 <template>
@@ -7,6 +10,7 @@ import Project from './Project.vue'
     :delay="0"
     url="https://www.midnite.com"
     p="t-8 x-6 lg:t-18 lg:x-8"
+    @click="modalStore.openModal('ProjectModal', { project: 'midnite' })"
   >
     <div
       pos="absolute inset-0"

@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Project from './Project.vue'
+import { useModalStore } from '~/stores/modal'
+
+const modalStore = useModalStore()
 </script>
 
 <template>
@@ -8,6 +11,7 @@ import Project from './Project.vue'
     url="https://screenshottedit.com"
     min-h="64"
     p="x-6 lg:x-8"
+    @click="modalStore.openModal('ProjectModal', { project: 'screenshottedit' })"
   >
     <div pos="absolute inset-0">
       <img
