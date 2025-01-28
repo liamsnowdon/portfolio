@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import Project from './Project.vue'
+import { useModalStore } from '~/stores/modal'
+
+const modalStore = useModalStore()
 </script>
 
 <template>
-  <Project :delay="500" url="https://www.printed.com">
+  <Project :delay="500" url="https://www.printed.com" @click="modalStore.openModal('ProjectModal', { project: 'printed' })">
     <div flex="~" items="center" space="x-4 lg:x-6">
       <img
         src="/images/projects/printed.png"

@@ -25,3 +25,5 @@ export interface PostEntity extends MarkdownParsedContent {
     words: number
   }
 }
+
+export type Project = 'midnite' | 'moonsgameguides' | 'screenshottedit' | 'printed' | 'widgeter'

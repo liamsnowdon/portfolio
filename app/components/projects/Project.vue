@@ -5,10 +5,14 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+
+defineEmits<{
+  click: []
+}>()
 </script>
 
 <template>
-  <a
+  <button
     v-motion="delay !== 0 ? {
       initial: {
         y: -100,
@@ -22,8 +26,7 @@ const props = defineProps<Props>()
         },
       },
     } : {}"
-    :href="url"
-    target="_blank"
+    type="button"
     bg="neutral-800 hover:neutral-700/50 focus:neutral-700/50"
     p="6 lg:8"
     rounded="2xl lg:3xl"
@@ -31,9 +34,10 @@ const props = defineProps<Props>()
     overflow="hidden"
     outline="none"
     ring="focus:2 neutral-800 offset-neutral-700 offset-2"
-    flex="~ col"
-    justify="center"
+    text="left"
+    w="full"
+    @click="$emit('click')"
   >
     <slot />
-  </a>
+  </button>
 </template>

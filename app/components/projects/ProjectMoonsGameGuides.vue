@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import Project from './Project.vue'
+import { useModalStore } from '~/stores/modal'
+
+const modalStore = useModalStore()
 </script>
 
 <template>
@@ -7,10 +10,11 @@ import Project from './Project.vue'
     :delay="400"
     url="https://moonsgameguides.com"
     border="3 purple-500"
+    @click="modalStore.openModal('ProjectModal', { project: 'moonsgameguides' })"
   >
     <div pos="relative">
       <h2 text="3xl lg:5xl white" font="bold" m="b-4">
-        Achievement guides, reviews and nonsense
+        Achievement guides, news and nonsense
       </h2>
 
       <p text="lg neutral-400" m="b-4">
