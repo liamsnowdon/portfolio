@@ -6,6 +6,7 @@ import Project from './Project.vue'
   <Project
     title="Re-imagining esports and sports betting"
     intro="Midnite is building a world-class esports, sports and game wagering platform for the new generation of fans."
+    url="https://midnite.com"
     :skills="[
       'Vue.js',
       'Nuxt.js',

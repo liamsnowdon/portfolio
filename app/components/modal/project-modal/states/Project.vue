@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import H2 from '~/components/typography/H2.vue'
+import Button from '~/components/button/Button.vue'
 
 defineProps({
   title: {
@@ -13,6 +14,10 @@ defineProps({
   },
   skills: {
     type: Array as PropType<string[]>,
+    required: true,
+  },
+  url: {
+    type: String,
     required: true,
   },
 })
@@ -29,7 +34,15 @@ defineProps({
         {{ intro }}
       </p>
 
-      <slot />
+      <div space="y-3">
+        <div>
+          <slot />
+        </div>
+
+        <Button :to="url" target="_blank">
+          View project
+        </Button>
+      </div>
     </div>
 
     <div grid="col-span-1 md:col-span-3" space="y-4">
