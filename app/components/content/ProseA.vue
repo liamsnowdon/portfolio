@@ -1,15 +1,12 @@
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   href: {
     type: String,
     default: '',
   },
-  target: {
-    type: String,
-    default: undefined,
-    required: false,
-  },
 })
+
+const target = props.href.startsWith('http') ? '_blank' : null
 </script>
 
 <template>

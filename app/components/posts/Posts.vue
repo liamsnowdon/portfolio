@@ -28,7 +28,7 @@ const { data: posts } = await useAsyncData('latest_posts', () => {
 
       <div flex="~" justify="center">
         <Button to="/posts">
-          View all
+          View all posts
         </Button>
       </div>
     </WrapperContent>
