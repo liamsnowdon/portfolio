@@ -6,11 +6,17 @@ import Wrapper from '~/components/wrapper/Wrapper.vue'
 import WrapperContent from '~/components/wrapper/WrapperContent.vue'
 import PostGrid from '~/components/posts/PostGrid.vue'
 import type { PostTileEntity } from '~/types'
+import { getExperience } from '~/utils'
+
+const experience = getExperience()
 
 useSeoMeta({
   title: 'Posts - Liam Snowdon',
   ogTitle: 'Posts - Liam Snowdon',
   twitterTitle: 'Posts - Liam Snowdon',
+  description: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
+  ogDescription: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
+  twitterDescription: `I'm a frontend engineer with over ${experience} years of commercial experience in web development and a keen eye for detail.`,
 })
 
 const { data } = await useAsyncData('posts', () => {
