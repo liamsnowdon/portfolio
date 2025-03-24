@@ -11,10 +11,10 @@ import Challenges from '~/components/challenges/Challenges.vue'
 
 <template>
   <Wrapper id="projects">
-    <WrapperContent space="y-4 lg:y-8">
-      <ProjectMidnite />
+    <WrapperContent>
+      <ProjectMidnite m="b-4 lg:b-8" />
 
-      <div grid="~ cols-1 lg:cols-2 gap-4 lg:gap-8">
+      <div grid="~ cols-1 lg:cols-2 gap-4 lg:gap-8" m="b-8">
         <ProjectMoonsGameGuides />
         <ProjectScreenshottedit />
 
