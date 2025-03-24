@@ -27,3 +27,10 @@ export interface PostEntity extends MarkdownParsedContent {
 }
 
 export type Project = 'midnite' | 'moonsgameguides' | 'screenshottedit' | 'printed' | 'widgeter'
+
+export type Challenge = {
+  name: string
+  slug: string
+  intro: string
+  challenge_url: string
+}
