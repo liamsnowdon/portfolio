@@ -2,6 +2,12 @@ import type { Challenge } from '~/types'
 
 export const challenges: Challenge[] = [
   {
+    name: 'Interactive Rating Component',
+    slug: 'rating-component',
+    intro: 'A rating card component with rating number buttons and submitted state.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI',
+  },
+  {
     name: 'NFT Preview Card Component',
     slug: 'nft-card-component',
     intro: 'A simple preview card component for an NFT.',
