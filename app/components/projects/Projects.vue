@@ -6,6 +6,7 @@ import ProjectMoonsGameGuides from './ProjectMoonsGameGuides.vue'
 import ProjectScreenshottedit from './ProjectScreenshottedit.vue'
 import ProjectPrinted from './ProjectPrinted.vue'
 import ProjectWidgeter from './ProjectWidgeter.vue'
+import Challenges from '~/components/challenges/Challenges.vue'
 </script>
 
 <template>
@@ -20,6 +21,8 @@ import ProjectWidgeter from './ProjectWidgeter.vue'
         <ProjectPrinted />
         <ProjectWidgeter />
       </div>
+
+      <Challenges />
     </WrapperContent>
   </Wrapper>
 </template>
