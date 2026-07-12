@@ -23,7 +23,7 @@ defineEmits<Emits>()
     <Dialog
       as="div"
       pos="fixed inset-0"
-      z="10"
+      z="50"
       overflow="y-auto"
       @close="$emit('close')"
     >
@@ -45,7 +45,7 @@ defineEmits<Emits>()
           leave-from="opacity-100"
           leave-to="opacity-0"
         >
-          <DialogOverlay pos="fixed inset-0" bg="neutral-900/70" transition="opacity" />
+          <DialogOverlay pos="fixed inset-0" bg="black/75" transition="opacity" />
         </TransitionChild>
 
         <!-- This element is to trick the browser into centering the modal contents. -->
@@ -64,47 +64,30 @@ defineEmits<Emits>()
             pos="relative"
             inline="block"
             align="bottom sm:middle"
-            bg="neutral-800"
-            rounded="3xl"
             text="left"
             overflow="hidden"
-            shadow="xl"
+            rounded="3xl"
             transform="~"
             transition="all"
             m="sm:y-8"
             w="sm:full"
-            :class="{
-              'sm:max-w-screen-md': false,
-              'sm:max-w-screen-lg': true,
-              'sm:max-w-screen-xl': false,
-            }"
+            class="border border-white/10 bg-[#0b0b13] shadow-2xl shadow-indigo-500/10 sm:max-w-screen-lg"
           >
-            <div bg="neutral-800" p="4 md:6">
-              <div flex="~" items="start" justify="between" space="x-4">
-                <div />
+            <button
+              class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-400 transition hover:border-indigo-400/40 hover:text-white"
+              aria-label="Close modal"
+              @click="$emit('close')"
+            >
+              <i class="i-carbon-close" text="2xl" />
+            </button>
 
-                <button
-                  p="2"
-                  bg="neutral-900/50"
-                  text="hover:white"
-                  rounded="full"
-                  flex="~"
-                  items="center"
-                  justify="center"
-                  @click="$emit('close')"
-                >
-                  <i class="i-carbon-close" text="3xl" />
-                </button>
-              </div>
-
-              <div m="t-2 md:t-4">
-                <slot name="content" />
-              </div>
+            <div p="5 md:8">
+              <slot name="content" />
             </div>
 
             <div
               v-if="$slots.footer"
-              bg="gray-50"
+              class="border-t border-white/10 bg-white/5"
               p="x-4 y-3 sm:x-6"
               flex="sm:~"
               justify="sm:end"

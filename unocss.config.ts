@@ -30,20 +30,16 @@ export default defineConfig({
 
   preflights: [{
     getCSS: ({ theme }: { theme: any }) => `
-      html, body {
-        height: 100%;
-      }
-
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 5rem;
+        overflow-x: hidden;
       }
 
       body {
         background-color: #08080c;
         color: ${theme.colors.neutral[400]};
         font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
-        overflow-x: hidden;
       }
 
       ::selection {

@@ -8,6 +8,7 @@ import Project from './Project.vue'
     title="Widgeter"
     intro="Build Tailwind pages with customizable widgets"
     url="https://widgeter.dev"
+    accent="#0ea5e9"
     :skills="[
       'Vue.js',
       'Nuxt.js',
@@ -15,8 +16,11 @@ import Project from './Project.vue'
       'Tailwind CSS',
       'Cypress',
     ]"
+    :highlights="[
+      'Add, move and edit widgets on the page, or start from prebuilt page templates',
+      'Download the generated Tailwind HTML — a single widget or the entire page',
+    ]"
   >
-    <p>Widgeter is a proof of concept of a WYSIWYG editor which lets you build pages with a selection of prebuilt customizable widgets. The editor allows you to add, delete and move widgets around the page and edit the content inside them. It even has templates, whole prebuilt pages, made up of widgets so you can create product pages, contact pages, FAQ pages, etc.</p>
-    <p>The app's purpose is to download the HTML, built with Tailwind CSS, and drop them into Tailwind projects. Each individual widget can be downloaded, or the entire page.</p>
+    <p>Widgeter is a proof-of-concept WYSIWYG editor for building pages from prebuilt, customizable widgets and dropping the HTML straight into Tailwind projects.</p>
   </Project>
 </template>
