@@ -39,7 +39,7 @@ function onMouseMove (event: MouseEvent) {
       },
     } : {}"
     type="button"
-    class="group border border-white/10 bg-white/5 backdrop-blur-sm transition-colors duration-300 hover:border-indigo-400/40 focus:border-indigo-400/40"
+    class="group border border-white/10 bg-white/5 transition-colors duration-300 hover:border-indigo-400/40 focus:border-indigo-400/40"
     p="6 lg:8"
     rounded="2xl lg:3xl"
     pos="relative"

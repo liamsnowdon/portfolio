@@ -24,7 +24,7 @@ export default defineConfig({
 
   shortcuts: {
     'text-gradient': 'bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400 bg-clip-text text-transparent',
-    'glass-card': 'bg-white/5 border border-white/10 backdrop-blur-md',
+    'glass-card': 'bg-white/5 border border-white/10',
     'link-accent': 'text-indigo-400 hover:text-indigo-300 transition-colors',
   },
 
@@ -36,6 +36,7 @@ export default defineConfig({
 
       html {
         scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
       }
 
       body {

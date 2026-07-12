@@ -26,7 +26,7 @@ const classes = computed(() => {
     // Variants
     'bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500 hover:brightness-110 ring-indigo-500 ring-offset-indigo-900 text-white shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/50': props.variant === 'primary',
     'bg-white hover:bg-neutral-200 ring-white ring-offset-neutral-900 text-black': props.variant === 'secondary',
-    'bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/30 backdrop-blur ring-neutral-800 ring-offset-neutral-900 text-white': props.variant === 'ghost',
+    'bg-white/5 hover:bg-white/10 border border-white/15 hover:border-white/30 ring-neutral-800 ring-offset-neutral-900 text-white': props.variant === 'ghost',
     'bg-white/30 hover:bg-white/40 ring-white ring-offset-neutral-900 text-white backdrop-filter backdrop-blur-2': props.variant === 'alpha-white',
     'bg-black/30 hover:bg-black/40 ring-black ring-offset-neutral-900 text-white backdrop-filter backdrop-blur-2': props.variant === 'alpha-black',
 

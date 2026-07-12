@@ -2,21 +2,51 @@
   <div class="pointer-events-none fixed inset-0 z--10 overflow-hidden" aria-hidden="true">
     <div class="background-grid absolute inset-0" />
 
-    <div class="aurora-blob left--10% top--20% h-50vh w-50vw bg-indigo-600/25" />
-    <div class="aurora-blob right--15% top-10% h-45vh w-45vw bg-fuchsia-600/15" style="animation-delay: -8s" />
-    <div class="aurora-blob bottom--25% left-20% h-50vh w-50vw bg-cyan-500/10" style="animation-delay: -16s" />
+    <div class="aurora aurora--indigo" />
+    <div class="aurora aurora--fuchsia" />
+    <div class="aurora aurora--cyan" />
 
     <div class="background-noise absolute inset-0 opacity-4" />
   </div>
 </template>
 
 <style scoped>
-.aurora-blob {
+/*
+ * The glow is baked into radial gradients rather than filter: blur() so the
+ * drift animation stays compositor-only — large animated blur filters force
+ * constant re-rasterisation and tank scroll performance.
+ */
+.aurora {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(120px);
-  animation: aurora-drift 24s ease-in-out infinite;
   will-change: transform;
+  animation: aurora-drift 30s ease-in-out infinite;
+}
+
+.aurora--indigo {
+  left: -20%;
+  top: -30%;
+  height: 80vh;
+  width: 80vw;
+  background: radial-gradient(closest-side, rgba(79, 70, 229, 0.18), transparent 70%);
+}
+
+.aurora--fuchsia {
+  right: -25%;
+  top: 0;
+  height: 70vh;
+  width: 70vw;
+  background: radial-gradient(closest-side, rgba(192, 38, 211, 0.12), transparent 70%);
+  animation-delay: -10s;
+}
+
+.aurora--cyan {
+  bottom: -35%;
+  left: 10%;
+  height: 80vh;
+  width: 80vw;
+  background: radial-gradient(closest-side, rgba(6, 182, 212, 0.1), transparent 70%);
+  animation-delay: -20s;
 }
 
 .background-grid {

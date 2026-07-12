@@ -23,7 +23,7 @@ const experience = getExperience()
       class="relative mb-8"
     >
       <div class="absolute -inset-3 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 opacity-40 blur-2xl" />
-      <div class="hero-avatar relative overflow-hidden rounded-full border border-white/15 bg-white/5 backdrop-blur">
+      <div class="hero-avatar relative overflow-hidden rounded-full border border-white/15 bg-white/5">
         <img src="/images/memoji.png" alt="Liam Snowdon Profile Picture" class="h-32 w-32 md:h-44 md:w-44">
       </div>
     </div>
@@ -42,7 +42,7 @@ const experience = getExperience()
           },
         },
       }"
-      class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-neutral-300 backdrop-blur"
+      class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-neutral-300"
     >
       <span class="relative flex h-2 w-2">
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75" />

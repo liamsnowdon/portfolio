@@ -8,7 +8,7 @@ import Button from '../button/Button.vue'
   <Wrapper id="need-a-website">
     <WrapperContent max-w="screen-lg">
       <div class="rounded-3xl bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 p-px shadow-2xl shadow-indigo-500/20">
-        <div class="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#0b0b13]/95 px-4 py-8 backdrop-blur md:px-10 md:py-14">
+        <div class="relative overflow-hidden rounded-[calc(1.5rem-1px)] bg-[#0b0b13] px-4 py-8 md:px-10 md:py-14">
           <div class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-indigo-500/25 blur-3xl" />
           <div class="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-fuchsia-500/15 blur-3xl" />
 

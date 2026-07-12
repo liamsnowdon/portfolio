@@ -55,7 +55,7 @@ onUnmounted(() => {
     <WrapperContent max-w="screen-md">
       <NuxtLink
         to="/posts"
-        class="group mb-10 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-neutral-300 backdrop-blur transition hover:border-indigo-400/40 hover:text-white"
+        class="group mb-10 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-neutral-300 transition hover:border-indigo-400/40 hover:text-white"
       >
         <span class="i-carbon-arrow-left transition-transform group-hover:-translate-x-0.5" />
         <span>Back to posts</span>

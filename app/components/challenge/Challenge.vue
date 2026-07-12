@@ -16,12 +16,12 @@ defineProps({
     target="_blank"
     class="group glass-card relative flex h-full flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-indigo-400/40"
   >
-    <div class="relative overflow-hidden">
+    <div class="relative transform-gpu overflow-hidden rounded-t-2xl">
       <img
         :src="`/images/challenges/${challenge.slug}.jpg`"
         :alt="`${challenge.name} thumbnail`"
         loading="lazy"
-        class="w-full transition-transform duration-500 group-hover:scale-105"
+        class="w-full transform-gpu backface-hidden transition-transform duration-500 will-change-transform group-hover:scale-105"
       >
       <div class="absolute inset-0 bg-gradient-to-t from-[#08080c]/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
