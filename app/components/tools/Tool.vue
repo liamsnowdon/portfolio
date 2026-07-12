@@ -14,15 +14,9 @@ defineProps<Props>()
   <a
     :href="tool.url"
     target="_blank"
-    flex="~ col"
-    items="center"
-    justify="center"
-    rounded="xl"
-    bg="neutral-800 hover:neutral-700/50"
-    aspect="1/1"
-    space="y-4"
+    class="glass-card flex items-center gap-3 whitespace-nowrap rounded-2xl px-6 py-4 transition-colors hover:border-indigo-400/40 hover:bg-white/10"
   >
-    <span :class="tool.icon" text="6xl white" />
-    <span text="white lg" font="bold">{{ tool.name }}</span>
+    <span :class="tool.icon" class="text-3xl text-white" />
+    <span class="text-sm font-semibold text-white">{{ tool.name }}</span>
   </a>
 </template>

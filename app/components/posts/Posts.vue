@@ -2,6 +2,7 @@
 import Wrapper from '../wrapper/Wrapper.vue'
 import WrapperContent from '../wrapper/WrapperContent.vue'
 import Button from '../button/Button.vue'
+import SectionHeading from '../section-heading/SectionHeading.vue'
 import PostGrid from './PostGrid.vue'
 import { useAsyncData, queryContent } from '#imports'
 import type { PostTileEntity } from '~/types'
@@ -18,16 +19,17 @@ const { data: posts } = await useAsyncData('latest_posts', () => {
 <template>
   <Wrapper>
     <WrapperContent>
-      <div text="left md:center" m="b-8">
-        <h2 text="3xl white" font="bold">
-          Latest posts
-        </h2>
-      </div>
+      <SectionHeading number="04" eyebrow="Writing" centered>
+        Latest posts
+        <template #description>
+          Notes, guides and thoughts from the frontend trenches.
+        </template>
+      </SectionHeading>
 
-      <PostGrid v-if="posts" :posts="posts" m="b-4 md:b-8" />
+      <PostGrid v-if="posts" :posts="posts" m="b-8 md:b-12" />
 
       <div flex="~" justify="center">
-        <Button to="/posts">
+        <Button to="/posts" variant="ghost" icon="i-carbon-arrow-right">
           View all posts
         </Button>
       </div>

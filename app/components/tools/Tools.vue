@@ -1,17 +1,8 @@
 <script setup lang="ts">
-import { A11y, Autoplay, Mousewheel, Scrollbar } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/autoplay'
-import 'swiper/css/pagination'
-import 'swiper/css/a11y'
-import 'swiper/css/scrollbar'
-import 'swiper/css/mousewheel'
-
 import Wrapper from '../wrapper/Wrapper.vue'
 import WrapperContent from '../wrapper/WrapperContent.vue'
+import SectionHeading from '../section-heading/SectionHeading.vue'
 import Tool from './Tool.vue'
-import { ClientOnly } from '#components'
 
 const items = [
   { name: 'Nuxt.js', url: 'https://nuxtjs.org', icon: 'i-logos-nuxt-icon' },
@@ -28,59 +19,49 @@ const items = [
   { name: 'Netlify', url: 'https://www.netlify.com', icon: 'i-logos-netlify-icon' },
   { name: 'Github', url: 'https://github.com/liamsnowdon', icon: 'i-carbon-logo-github' },
 ]
+
+const rowOne = items.slice(0, Math.ceil(items.length / 2))
+const rowTwo = items.slice(Math.ceil(items.length / 2))
 </script>
 
 <template>
   <Wrapper>
     <WrapperContent>
-      <div text="left md:center" space="y-4" m="b-8">
-        <h2 text="3xl white" font="bold">
-          My Toolset
-        </h2>
-
-        <p text="lg neutral-400">
+      <SectionHeading number="03" eyebrow="Toolset" centered>
+        My Toolset
+        <template #description>
           These are the development tools I use day-to-day.
-        </p>
+        </template>
+      </SectionHeading>
+    </WrapperContent>
+
+    <div class="marquee-mask space-y-4">
+      <div class="flex overflow-hidden">
+        <div class="marquee-row flex w-max gap-4 pr-4">
+          <Tool v-for="(item, index) in [...rowOne, ...rowOne]" :key="`${item.name}-${index}`" :tool="item" />
+        </div>
       </div>
 
-      <ClientOnly>
-        <Swiper
-          :modules="[A11y, Autoplay, Scrollbar, Mousewheel]"
-          :slides-per-view="2"
-          :space-between="16"
-          :breakpoints="{
-            480: {
-              slidesPerView: 3,
-            },
-            768: {
-              slidesPerView: 4,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-            1280: {
-              slidesPerView: 6,
-            },
-          }"
-          :autoplay="{
-            disableOnInteraction: false,
-          }"
-          :scrollbar="{
-            horizontalClass: 'scrollbar-stack',
-            dragClass: 'scrollbar-stack-drag',
-            draggable: true,
-            hide: false,
-          }"
-          :mousewheel="{
-            thresholdDelta: 10,
-            forceToAxis: true,
-          }"
-        >
-          <SwiperSlide v-for="item in items" :key="item.name" aspect="1/1">
-            <Tool :tool="item" />
-          </SwiperSlide>
-        </Swiper>
-      </ClientOnly>
-    </WrapperContent>
+      <div class="flex overflow-hidden">
+        <div class="marquee-row marquee-row--reverse flex w-max gap-4 pr-4">
+          <Tool v-for="(item, index) in [...rowTwo, ...rowTwo]" :key="`${item.name}-${index}`" :tool="item" />
+        </div>
+      </div>
+    </div>
   </Wrapper>
 </template>
+
+<style scoped>
+.marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-row {
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-row--reverse {
+  animation-direction: reverse;
+}
+</style>

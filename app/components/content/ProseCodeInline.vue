@@ -1,9 +1,9 @@
 <template>
   <code
-    bg="neutral-800"
+    bg="white/8"
     p="y-0.5 x-1.5"
-    text="indigo-500 base"
-    border="~ neutral-700"
+    text="indigo-300 base"
+    border="~ white/10"
     rounded="md"
   >
     <slot />

@@ -13,7 +13,7 @@ const target = props.href.startsWith('http') ? '_blank' : null
   <NuxtLink
     :href="href"
     :target="target"
-    class="text-indigo-500 hover:text-indigo-400 text-lg"
+    class="link-accent text-lg underline decoration-indigo-400/40 underline-offset-4 hover:decoration-indigo-300"
   >
     <slot />
   </NuxtLink>

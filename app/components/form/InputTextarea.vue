@@ -32,10 +32,11 @@ function onInput (event: Event) {
     <textarea
       :id="id"
       :name="id"
-      bg="neutral-800 focus:neutral-700"
+      class="bg-white/5 transition-colors placeholder:text-neutral-600 focus:bg-white/10 focus:ring-2 focus:ring-indigo-500/20"
       p="3"
       w="full"
-      border="1 rounded-xl neutral-800 focus:indigo-500"
+      min-h="30"
+      border="1 rounded-xl white/10 focus:indigo-400/60"
       text="base white"
       outline="none"
       :placeholder="placeholder"
