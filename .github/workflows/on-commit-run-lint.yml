@@ -19,7 +19,7 @@ jobs:
       - name: Setup Nodejs and npm
         uses: actions/setup-node@v2
         with:
-          node-version: 18.18.2
+          node-version: 22.13.1
           cache: npm
 
       - name: Install dependencies
