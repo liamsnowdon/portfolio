@@ -22,11 +22,14 @@ defineEmits<Emits>()
   <TransitionRoot as="template" :show="isOpen">
     <Dialog
       as="div"
-      pos="fixed inset-0"
+      pos="fixed top-0 bottom-0 left-0"
+      w="screen"
       z="50"
       overflow="y-auto"
       @close="$emit('close')"
     >
+      <!-- w-screen (100vw) on the Dialog includes the scrollbar gutter, so the
+           panel doesn't re-center when the scroll lock releases mid-leave-transition -->
       <div
         flex="~"
         items="end"
