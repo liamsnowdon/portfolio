@@ -25,7 +25,7 @@ const socials = [
           :href="social.url"
           target="_blank"
           :aria-label="social.name"
-          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-400 transition hover:border-indigo-400/40 hover:text-white"
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-400 transition hover:border-white/30 hover:text-white"
         >
           <span :class="social.icon" class="text-lg" />
         </a>

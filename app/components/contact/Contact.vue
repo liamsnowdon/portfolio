@@ -38,7 +38,7 @@ const socials = [
           :href="social.url"
           target="_blank"
           :aria-label="social.name"
-          class="group glass-card inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-indigo-400/40 hover:bg-white/10"
+          class="group glass-card inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
         >
           <span :class="social.icon" class="text-2xl text-neutral-400 transition-colors group-hover:text-white" />
         </a>
