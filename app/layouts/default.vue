@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Background from '~/components/background/Background.vue'
 import Navbar from '~/components/navbar/Navbar.vue'
 import Contact from '~/components/contact/Contact.vue'
 import Footer from '~/components/footer/Footer.vue'
@@ -11,6 +12,7 @@ const modalStore = useModalStore()
 
 <template>
   <div>
+    <Background />
     <Navbar />
     <slot />
     <Contact />

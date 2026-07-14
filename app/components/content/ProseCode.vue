@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import { useClipboard } from '@vueuse/core'
 
 const props = withDefaults(defineProps<{
@@ -15,6 +16,13 @@ const props = withDefaults(defineProps<{
 })
 
 const { copied, copy, isSupported } = useClipboard()
+
+// isSupported is false during SSR, so gate on mounted to avoid hydration mismatches
+const mounted = ref(false)
+
+onMounted(() => {
+  mounted.value = true
+})
 
 const languageIconsMap: Record<string, string> = {
   scss: 'i-logos-sass',
@@ -35,9 +43,9 @@ function copyToClipboard () {
 </script>
 
 <template>
-  <div m="y-7" rounded="2xl" overflow="hidden">
+  <div m="y-7" rounded="2xl" overflow="hidden" class="border border-white/10 bg-white/3">
     <div
-      v-if="filename || isSupported"
+      v-if="filename || (mounted && isSupported)"
       flex="~"
       justify="between"
       p="4"
@@ -48,7 +56,7 @@ function copyToClipboard () {
         <span v-if="filename">{{ filename }}</span>
       </span>
 
-      <div v-if="isSupported" flex="~" items="center" space="x-2">
+      <div v-if="mounted && isSupported" flex="~" items="center" space="x-2">
         <template v-if="copied">
           <span text="sm indigo-500">
             Copied

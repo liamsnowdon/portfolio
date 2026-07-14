@@ -8,6 +8,7 @@ import Project from './Project.vue'
     title="Moon's Game Guides"
     intro="Achievement guides, news and nonsense"
     url="https://moonsgameguides.com"
+    accent="#a855f7"
     :skills="[
       'Vue.js',
       'Nuxt.js',
@@ -15,8 +16,12 @@ import Project from './Project.vue'
       'UnoCSS',
       'Vitest',
     ]"
+    :highlights="[
+      'Guides written in Markdown with Nuxt Content, using Nuxt Studio as a visual editor',
+      'Steam API integration pulling news, achievements and my profile data',
+      'Discord bot posting the latest gaming news to my server every day',
+    ]"
   >
-    <p>I started writing achievement game guides on Steam for games I play. It was a great opportunity to create a site to host them outside of Steam, and use Nuxt Studio + Nuxt Content to write them. Nuxt Content allows content to be written in Markdown, with Nuxt Studio being a visual editor to help write it.</p>
-    <p>As I continued working on it, I integrated the Steam API to start fetching all sorts of data, like news, achievements and my profile. It allowed me to read from popular news providers and official community announcements, and build a discord bot to post news to my server every day.</p>
+    <p>My home for the game guides I write, plus gaming news and general nonsense.</p>
   </Project>
 </template>

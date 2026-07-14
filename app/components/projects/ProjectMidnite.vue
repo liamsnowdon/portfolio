@@ -29,11 +29,11 @@ const modalStore = useModalStore()
       pos="relative"
     >
       <h2 text="3xl lg:5xl white" font="bold" m="b-4">
-        Re-imagining esports and sports betting
+        Building the future of betting
       </h2>
 
       <p text="lg neutral-400" m="b-8">
-        Midnite is building a world-class esports, sports and game wagering platform for the new generation of fans.
+        Midnite is everything your current betting app isn't, taking Sports & Casino into a new era.
       </p>
 
       <div flex="~" items="start" justify="center" max-h="132 lg:165">

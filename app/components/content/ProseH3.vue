@@ -10,6 +10,7 @@ const generate = anchorLinks?.depth >= heading && !anchorLinks?.exclude.includes
 <template>
   <h3
     :id="id"
+    class="font-display tracking-tight"
     text="2xl white"
     font="bold"
     m="t-4 b-4"

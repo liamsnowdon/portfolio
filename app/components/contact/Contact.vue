@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import Wrapper from '../wrapper/Wrapper.vue'
 import WrapperContent from '../wrapper/WrapperContent.vue'
+import SectionHeading from '../section-heading/SectionHeading.vue'
 import InputText from '../form/InputText.vue'
 import InputTextarea from '../form/InputTextarea.vue'
 import Button from '../button/Button.vue'
@@ -21,35 +22,26 @@ const socials = [
 </script>
 
 <template>
-  <Wrapper id="contact" border="t neutral-800">
+  <Wrapper id="contact" class="border-t border-white/5">
     <WrapperContent>
-      <div text="left md:center" space="y-4" m="b-8">
-        <h2 text="3xl white" font="bold">
-          Get in touch!
-        </h2>
+      <SectionHeading eyebrow="Contact" centered>
+        Get in touch!
+        <template #description>
+          Wanna chat? You can contact me via email or social media. Or, fill out the form to send me a message directly.
+        </template>
+      </SectionHeading>
 
-        <p text="lg neutral-400">
-          Wanna chat? You can contact me via email or social media.
-          <br>
-          Or, fill out the form to send me a message directly.
-        </p>
-
-        <div flex="~" justify="md:center" space="x-4">
-          <a
-            v-for="social in socials"
-            :key="social.icon"
-            :href="social.url"
-            target="_blank"
-            flex="inline"
-            p="2"
-            bg="neutral-800 hover:neutral-700"
-            border="rounded-2xl"
-            :aria-label="social.name"
-            class="group"
-          >
-            <span :class="social.icon" display="inline-block" text="5xl neutral-400 group-hover:white" />
-          </a>
-        </div>
+      <div class="mb-10 flex justify-center gap-4">
+        <a
+          v-for="social in socials"
+          :key="social.icon"
+          :href="social.url"
+          target="_blank"
+          :aria-label="social.name"
+          class="group glass-card inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:border-white/30 hover:bg-white/10"
+        >
+          <span :class="social.icon" class="text-2xl text-neutral-400 transition-colors group-hover:text-white" />
+        </a>
       </div>
 
       <form
@@ -57,9 +49,7 @@ const socials = [
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        max-w="screen-sm"
-        m="x-auto"
-        space="y-4"
+        class="glass-card mx-auto max-w-screen-sm space-y-5 rounded-3xl p-6 md:p-10"
       >
         <input type="hidden" name="form-name" value="contact">
 
@@ -95,7 +85,7 @@ const socials = [
 
         <div flex="~" justify="center">
           <Button full-size>
-            Submit
+            Send it my way
           </Button>
         </div>
       </form>

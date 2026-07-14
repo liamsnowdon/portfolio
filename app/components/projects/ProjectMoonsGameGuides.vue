@@ -9,7 +9,6 @@ const modalStore = useModalStore()
   <Project
     :delay="400"
     url="https://moonsgameguides.com"
-    border="3 purple-500"
     @click="modalStore.openModal('ProjectModal', { project: 'moonsgameguides' })"
   >
     <div pos="relative">

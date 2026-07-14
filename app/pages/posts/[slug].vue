@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useSeoMeta } from '@unhead/vue'
 import { useRoute } from 'vue-router'
 import { useAsyncData, queryContent } from '#imports'
@@ -25,36 +26,63 @@ useSeoMeta({
   twitterTitle: `${post.value?.title} - Liam Snowdon`,
   twitterDescription: post.value?.intro,
 })
+
+const readingProgress = ref(0)
+
+function onScroll () {
+  const element = document.documentElement
+  const scrollable = element.scrollHeight - element.clientHeight
+  readingProgress.value = scrollable > 0 ? Math.min(element.scrollTop / scrollable, 1) : 0
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+})
 </script>
 
 <template>
   <Wrapper>
-    <WrapperContent>
+    <div
+      class="fixed left-0 top-0 z-50 h-0.75 w-full origin-left bg-gradient-to-r from-indigo-400 via-violet-400 to-fuchsia-400"
+      :style="{ transform: `scaleX(${readingProgress})` }"
+    />
+
+    <WrapperContent max-w="screen-md">
       <NuxtLink
         to="/posts"
-        class="text-indigo-500 hover:text-indigo-400"
-        flex="inline"
-        items="center"
-        space="x-2"
-        m="b-8"
+        class="group mb-10 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-neutral-300 transition hover:border-indigo-400/40 hover:text-white"
       >
-        <span class="i-carbon-arrow-left" />
+        <span class="i-carbon-arrow-left transition-transform group-hover:-translate-x-0.5" />
         <span>Back to posts</span>
       </NuxtLink>
 
       <ContentDoc>
         <template #default="{ doc }">
           <article>
-            <div m="b-8">
-              <h1 text="4xl md:6xl white" font="bold" m="b-4">
+            <div class="mb-12">
+              <h1 class="mb-6 font-display text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
                 {{ doc.title }}
               </h1>
-              <p>
-                <template v-if="doc.readingTime">
-                  {{ doc.readingTime.text }} •
-                </template>Posted on {{ $dayjs(doc.posted_at).format('MMM DD, YYYY') }}
-              </p>
+
+              <div class="flex flex-wrap items-center gap-3 text-sm text-neutral-400">
+                <span v-if="doc.readingTime" class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+                  <span class="i-carbon-time" />
+                  {{ doc.readingTime.text }}
+                </span>
+                <span class="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5">
+                  <span class="i-carbon-calendar" />
+                  {{ $dayjs(doc.posted_at).format('MMM DD, YYYY') }}
+                </span>
+              </div>
+
+              <div class="mt-10 h-px w-full bg-gradient-to-r from-indigo-400/40 via-white/10 to-transparent" />
             </div>
+
             <ContentRenderer :value="doc" />
           </article>
         </template>
@@ -72,11 +100,11 @@ useSeoMeta({
             </div>
 
             <div space="y-4">
-              <h2 text="3xl white" font="bold">
+              <h2 class="font-display text-3xl font-bold tracking-tight text-white">
                 Well this is awkward...
               </h2>
               <p>
-                I couldn't find a post here, let's head <NuxtLink to="/posts" class="text-indigo-500 hover:text-indigo-400">
+                I couldn't find a post here, let's head <NuxtLink to="/posts" class="link-accent underline decoration-indigo-400/40 underline-offset-4">
                   back
                 </NuxtLink>
               </p>

@@ -10,20 +10,25 @@ const socials = [
 </script>
 
 <template>
-  <footer p="y-8 x-4 md:y-12 md:x-8">
-    <WrapperContent flex="~" items="center" justify="between">
-      <span text="white sm">&copy; 2021 - {{ year }} Liam Snowdon</span>
+  <footer class="border-t border-white/5" p="y-8 x-4 md:x-8">
+    <WrapperContent class="flex flex-col items-center justify-between gap-4 md:flex-row">
+      <span class="font-display text-sm font-semibold tracking-tight text-white">
+        liam<span class="text-gradient">snowdon</span>
+      </span>
 
-      <div flex="~" space="x-4">
+      <span class="text-sm text-neutral-500">&copy; 2021 - {{ year }} Liam Snowdon. Built with Nuxt & UnoCSS.</span>
+
+      <div class="flex gap-2">
         <a
           v-for="social in socials"
           :key="social.name"
           :href="social.url"
           target="_blank"
-          :class="social.icon"
-          text="xl neutral-400 hover:white"
           :aria-label="social.name"
-        />
+          class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-neutral-400 transition hover:border-white/30 hover:text-white"
+        >
+          <span :class="social.icon" class="text-lg" />
+        </a>
       </div>
     </WrapperContent>
   </footer>

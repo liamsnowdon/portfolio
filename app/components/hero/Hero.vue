@@ -7,76 +7,31 @@ const experience = getExperience()
 
 <template>
   <header
-    flex="~ col"
-    items="center"
-    p="y-6 md:y-12 x-2 md:x-4"
-    text="center"
+    class="relative flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 py-16 text-center md:px-8"
   >
     <div
       v-motion="{
         initial: {
-          y: -100,
+          scale: 0.8,
           opacity: 0,
         },
         enter: {
-          y: 0,
+          scale: 1,
           opacity: 1,
         },
       }"
-      bg="black/20"
-      overflow="hidden"
-      m="b-4"
-      border="~ indigo-500 rounded-full"
+      class="relative mb-8"
     >
-      <img src="/images/memoji.png" alt="Liam Snowdon Profile Picture" h="30 md:60" w="30 md:60">
+      <div class="absolute -inset-3 rounded-full bg-gradient-to-tr from-indigo-500 via-violet-500 to-fuchsia-500 opacity-40 blur-2xl" />
+      <div class="hero-avatar relative overflow-hidden rounded-full border border-white/15 bg-white/5">
+        <img src="/images/memoji.png" alt="Liam Snowdon Profile Picture" class="h-32 w-32 md:h-44 md:w-44">
+      </div>
     </div>
 
     <h1
       v-motion="{
         initial: {
-          y: -100,
-          opacity: 0,
-        },
-        enter: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            delay: 100,
-          },
-        },
-      }"
-      text="4xl md:6xl white"
-      font="bold"
-      m="b-2"
-    >
-      Liam Snowdon
-    </h1>
-
-    <h2
-      v-motion="{
-        initial: {
-          y: -100,
-          opacity: 0,
-        },
-        enter: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            delay: 150,
-          },
-        },
-      }"
-      text="xl md:3xl white"
-      font="semibold"
-      m="b-4 md:b-8"
-    >
-      Frontend Engineer
-    </h2>
-
-    <p
-      v-motion="{
-        initial: {
-          y: -100,
+          y: 30,
           opacity: 0,
         },
         enter: {
@@ -87,30 +42,86 @@ const experience = getExperience()
           },
         },
       }"
-      text="lg md:2xl indigo-500"
-      font="semibold"
-      m="b-8"
+      class="mb-6 max-w-5xl font-display text-5xl font-bold leading-[1.05] tracking-tight text-white md:text-8xl"
     >
-      {{ experience }} years of experience building cool stuff
-    </p>
+      Liam Snowdon<span class="text-shimmer">.</span>
+      <span class="mt-2 block text-3xl font-semibold text-neutral-300 md:text-5xl">
+        Crafting <span class="text-shimmer">pixel-perfect</span> experiences for the web
+      </span>
+    </h1>
 
-    <Button
+    <p
       v-motion="{
         initial: {
-          y: -100,
+          y: 30,
           opacity: 0,
         },
         enter: {
           y: 0,
           opacity: 1,
           transition: {
-            delay: 250,
+            delay: 300,
+          },
+        },
+      }"
+      class="mb-10 max-w-2xl text-lg text-neutral-400 md:text-xl"
+    >
+      Frontend engineer with {{ experience }}+ years of experience building cool stuff with Vue, Nuxt and a keen eye for detail.
+    </p>
+
+    <div
+      v-motion="{
+        initial: {
+          y: 30,
+          opacity: 0,
+        },
+        enter: {
+          y: 0,
+          opacity: 1,
+          transition: {
+            delay: 400,
+          },
+        },
+      }"
+      class="flex flex-col items-center gap-4 sm:flex-row"
+    >
+      <Button href="#projects" size="large">
+        See the cool stuff
+      </Button>
+
+      <Button href="#contact" variant="ghost" size="large">
+        Get in touch
+      </Button>
+    </div>
+
+    <a
+      v-motion="{
+        initial: {
+          opacity: 0,
+        },
+        enter: {
+          opacity: 1,
+          transition: {
+            delay: 800,
           },
         },
       }"
       href="#projects"
+      class="absolute bottom-8 hidden flex-col items-center gap-2 text-neutral-500 transition hover:text-white md:flex"
+      aria-label="Scroll to projects"
     >
-      What cool stuff?
-    </Button>
+      <span class="text-xs uppercase tracking-[0.3em]">Scroll</span>
+      <span class="i-carbon-chevron-down hero-scroll-cue text-xl" />
+    </a>
   </header>
 </template>
+
+<style scoped>
+.hero-avatar img {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+.hero-scroll-cue {
+  animation: float-y 2s ease-in-out infinite;
+}
+</style>

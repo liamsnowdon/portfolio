@@ -47,18 +47,37 @@ const groupedPosts = computed(() => {
 
 <template>
   <Wrapper>
-    <WrapperContent space="y-8">
-      <h1 text="4xl md:6xl white center" font="bold">
-        Posts
-      </h1>
+    <WrapperContent>
+      <div class="mb-14 text-center md:mb-20">
+        <p class="mb-4 flex items-center justify-center gap-3">
+          <span class="h-px w-10 bg-gradient-to-r from-transparent to-indigo-400/60" />
+          <span class="text-xs uppercase tracking-[0.3em] text-neutral-500">The blog</span>
+          <span class="h-px w-10 bg-gradient-to-l from-transparent to-indigo-400/60" />
+        </p>
 
-      <div space="y-12">
-        <div v-for="group in groupedPosts" :key="group.year">
-          <h2 text="3xl white" font="bold" m="b-8">
-            {{ group.year }}
-          </h2>
+        <h1 class="mb-4 font-display text-5xl font-bold tracking-tight text-white md:text-7xl">
+          Posts<span class="text-shimmer">.</span>
+        </h1>
+
+        <p class="mx-auto max-w-xl text-lg text-neutral-400">
+          Notes, guides and thoughts from the frontend trenches.
+        </p>
+      </div>
+
+      <div space="y-16">
+        <section v-for="group in groupedPosts" :key="group.year">
+          <div class="mb-8 flex items-center gap-4">
+            <h2 class="font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
+              {{ group.year }}
+            </h2>
+            <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-neutral-400">
+              {{ group.posts.length }} {{ group.posts.length === 1 ? 'post' : 'posts' }}
+            </span>
+            <span class="h-px flex-1 bg-gradient-to-r from-white/15 to-transparent" />
+          </div>
+
           <PostGrid :posts="group.posts" />
-        </div>
+        </section>
       </div>
     </WrapperContent>
   </Wrapper>

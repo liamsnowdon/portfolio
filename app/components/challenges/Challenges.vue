@@ -12,7 +12,7 @@ import { ClientOnly } from '#components'
 <template>
   <div text="center" space="y-4" m="b-8">
     <p text="sm neutral-400">
-      ...and plenty more <NuxtLink to="/challenges" class="text-indigo-500 hover:text-indigo-400">coding challenges!</NuxtLink>
+      ...and plenty more <NuxtLink to="/challenges" class="link-accent underline decoration-indigo-400/40 underline-offset-4">coding challenges!</NuxtLink>
     </p>
   </div>
 

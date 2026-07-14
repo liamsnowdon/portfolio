@@ -9,7 +9,7 @@ import type { Project } from '~/types'
 
 defineProps({
   project: {
-    type: Object as PropType<Project>,
+    type: String as PropType<Project>,
     required: true,
   },
 })
