@@ -4,21 +4,31 @@ import WrapperContent from '../wrapper/WrapperContent.vue'
 import SectionHeading from '../section-heading/SectionHeading.vue'
 import Tool from './Tool.vue'
 
+type Tool = {
+  name: string
+  url: string
+  icon: string
+}
+
 const items = [
   { name: 'Nuxt.js', url: 'https://nuxtjs.org', icon: 'i-logos-nuxt-icon' },
   { name: 'Vue.js', url: 'https://vuejs.org', icon: 'i-logos-vue' },
   { name: 'TypeScript', url: 'https://www.typescriptlang.org', icon: 'i-logos-typescript-icon' },
+  { name: 'Pinia', url: 'https://pinia.vuejs.org/', icon: 'i-logos-pinia' },
   { name: 'Tailwind CSS', url: 'https://tailwindcss.com', icon: 'i-logos-tailwindcss-icon' },
   { name: 'UnoCSS', url: 'https://unocss.dev', icon: 'i-logos-unocss' },
+  { name: 'Nuxt UI', url: 'https://ui.nuxt.com/', icon: 'i-logos-nuxt-icon' },
   { name: 'Sass', url: 'https://sass-lang.com', icon: 'i-logos-sass' },
   { name: 'Vitest', url: 'https://vitest.dev/', icon: 'i-logos-vitest' },
   { name: 'Jest', url: 'https://jestjs.io', icon: 'i-logos-jest' },
   { name: 'Cypress', url: 'https://www.cypress.io/', icon: 'i-logos-cypress-icon' },
-  { name: 'VSCode', url: 'https://code.visualstudio.com', icon: 'i-logos-visual-studio-code' },
+  { name: 'Playwright', url: 'https://playwright.dev', icon: 'i-logos-playwright' },
   { name: 'Figma', url: 'https://www.figma.com', icon: 'i-logos-figma' },
+  { name: 'VSCode', url: 'https://code.visualstudio.com', icon: 'i-logos-visual-studio-code' },
   { name: 'Netlify', url: 'https://www.netlify.com', icon: 'i-logos-netlify-icon' },
+  { name: 'Cloudflare', url: 'https://www.cloudflare.com/', icon: 'i-logos-cloudflare-icon' },
   { name: 'Github', url: 'https://github.com/liamsnowdon', icon: 'i-carbon-logo-github' },
-]
+] satisfies Tool[]
 
 const rowOne = items.slice(0, Math.ceil(items.length / 2))
 const rowTwo = items.slice(Math.ceil(items.length / 2))
