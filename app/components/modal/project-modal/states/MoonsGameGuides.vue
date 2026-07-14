@@ -22,6 +22,6 @@ import Project from './Project.vue'
       'Discord bot posting the latest gaming news to my server every day',
     ]"
   >
-    <p>My home for the Steam achievement guides I write, outside of Steam — plus gaming news and general nonsense.</p>
+    <p>My home for the game guides I write, plus gaming news and general nonsense.</p>
   </Project>
 </template>

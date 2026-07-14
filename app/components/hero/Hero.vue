@@ -28,29 +28,6 @@ const experience = getExperience()
       </div>
     </div>
 
-    <p
-      v-motion="{
-        initial: {
-          y: 20,
-          opacity: 0,
-        },
-        enter: {
-          y: 0,
-          opacity: 1,
-          transition: {
-            delay: 100,
-          },
-        },
-      }"
-      class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-neutral-300"
-    >
-      <span class="relative flex h-2 w-2">
-        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75" />
-        <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-      </span>
-      Hey, I'm Liam — nice to meet you
-    </p>
-
     <h1
       v-motion="{
         initial: {

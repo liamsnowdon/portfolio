@@ -23,7 +23,7 @@ const highlights = [
       <div class="grid grid-cols-1 items-start gap-8 lg:grid-cols-5 lg:gap-12">
         <div class="space-y-4 lg:col-span-3">
           <p text="lg neutral-400">
-            I'm a frontend engineer with over {{ experience }} years of commercial experience in web development. My journey started with AngularJS and jQuery, but I quickly fell in love with the simplicity and ease of use of Vue.js and Nuxt.js.
+            I'm a frontend engineer with over {{ experience }} years of commercial experience in web development, specialising in building web apps with Nuxt.js/Vue.js, TypeScript and Tailwind.
           </p>
 
           <p text="lg neutral-400">

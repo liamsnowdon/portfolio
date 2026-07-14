@@ -14,12 +14,13 @@ import Project from './Project.vue'
       'Nuxt.js',
       'TypeScript',
       'UnoCSS',
+      'Netlify',
     ]"
     :highlights="[
       'Optimised and resized images with Nuxt Image and the Netlify Image CDN',
       'Wallpapers resized and cropped for every device, from desktop to mobile',
     ]"
   >
-    <p>A library of high-quality video game wallpapers — born from playing a lot of games and spamming the screenshot button a LOT.</p>
+    <p>A library of high-quality video game wallpapers, from playing a lot of games and spamming the screenshot button a LOT.</p>
   </Project>
 </template>
