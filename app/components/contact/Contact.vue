@@ -24,7 +24,7 @@ const socials = [
 <template>
   <Wrapper id="contact" class="border-t border-white/5">
     <WrapperContent>
-      <SectionHeading number="05" eyebrow="Contact" centered>
+      <SectionHeading eyebrow="Contact" centered>
         Get in touch!
         <template #description>
           Wanna chat? You can contact me via email or social media. Or, fill out the form to send me a message directly.
